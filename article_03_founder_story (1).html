@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I validated my idea in 6 weeks without building anything · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.8}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.back{font-size:12px;color:var(--muted);text-decoration:none}.back:hover{color:var(--brand)}
+.stage-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);background:#eef0ff;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.story-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0f6e56;background:#f0fdf4;padding:4px 10px;border-radius:20px;margin-bottom:14px;margin-left:6px;border:1px solid #bbf7d0}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px;flex-wrap:wrap}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.author-note{font-size:12px;color:var(--muted);font-style:italic;background:var(--soft);border-radius:8px;padding:12px 16px;margin-bottom:32px;border:1px solid var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+.week-block{margin-bottom:28px;border-left:2px solid var(--border);padding-left:20px;position:relative}
+.week-block::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--brand);position:absolute;left:-6px;top:6px}
+.week-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:6px}
+.week-title{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);margin-bottom:8px}
+.week-body{font-size:15px;color:#1a1a18;line-height:1.7}
+.week-learning{background:var(--soft);border-radius:7px;padding:10px 14px;font-size:13px;color:var(--ink);margin-top:10px;border:1px solid var(--border)}
+.wl-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.result-box{background:var(--ink);color:#fff;border-radius:12px;padding:22px 24px;margin:28px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.result-num{font-family:'DM Serif Display',serif;font-size:32px;line-height:1;color:var(--brand)}
+.result-label{font-size:11px;color:#aaa;margin-top:4px;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+  
+</div>
+
+<span class="stage-tag">Stage 1 · Problem Validation Fit</span>
+<span class="story-tag">Founder story</span>
+<h1 class="article-title">How I validated my idea in 6 weeks without building anything</h1>
+<div class="article-byline">
+  <span>SheBlooms Community</span>
+  <span class="byline-dot"></span>
+  <span>9 min read</span>
+  <span class="byline-dot"></span>
+  <span>Stage 1 · Full journey</span>
+</div>
+
+<div class="author-note">This is a founder story from the SheBlooms community. It reflects one founder's experience of Stage 1. Details have been kept general to protect her privacy.</div>
+
+<p class="article-lead">I had an idea, no product, and six weeks before I had to go back to work. Here's the exact week-by-week process I used to figure out whether I was building something people would pay for — before writing a single line of code.</p>
+
+<p>In November 2024, I quit my job to work on a startup idea I'd been thinking about for two years. The idea was a platform for freelance consultants to manage their client relationships and proposals — something I'd desperately needed when I was freelancing and could never find.</p>
+
+<p>I gave myself six weeks. If I couldn't find enough signal in six weeks to justify continuing, I'd go back to employment and keep building on the side. This was the constraint that saved me from the most common mistake founders make: building before validating.</p>
+
+<p>I had no team, no technical background, no funding. What I had was a hypothesis, a calendar, and a framework I'd found through SheBlooms. Here's exactly what I did each week.</p>
+
+<h2>The six weeks</h2>
+
+<div class="week-block">
+  <div class="week-label">Week 1</div>
+  <div class="week-title">Defining the problem — and discovering I had it wrong</div>
+  <div class="week-body">
+    <p>I spent the first week writing down everything I believed about the problem. Who had it. Why it existed. What they were doing about it. How much it cost them. What the ideal solution looked like.</p>
+    <p>Then I took everything I'd written and tried to falsify it. For each assumption, I asked: what evidence would prove this wrong? And where would I find that evidence?</p>
+    <p>This exercise revealed that my problem statement — "freelancers struggle to manage client relationships" — was too vague to test. It could mean a hundred different things. I rewrote it three times until I had something specific: "Independent consultants with 3–8 active clients lose revenue at the proposal stage because they have no system for tracking client interest and following up at the right moment."</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      A vague problem statement produces vague validation. Spend more time on the problem definition than feels comfortable. You'll rewrite it again after the interviews, but starting with something specific means your first interviews actually test something.
+    </div>
+  </div>
+</div>
+
+<div class="week-block">
+  <div class="week-label">Week 2</div>
+  <div class="week-title">Finding interviewees — and why my first instinct was wrong</div>
+  <div class="week-body">
+    <p>My first instinct was to reach out to freelancers I knew personally. I had ten in mind immediately — former colleagues, people in my network, a friend who ran a consulting practice.</p>
+    <p>I decided not to. People who know me would want to help me. Their responses would be shaped by our relationship, not by their actual experience of the problem. Instead, I found strangers.</p>
+    <p>I spent two days in LinkedIn communities for independent consultants, freelance networks, and professional services groups. I sent 40 cold connection requests with a simple message: "I'm researching how independent consultants manage their sales process. Would you spend 20 minutes with me? No selling, just listening." Twenty-three people agreed.</p>
+    <p>I also posted in two online communities for freelancers asking: "What's the most frustrating part of managing your client pipeline?" I got 34 comments. Reading them told me whether my problem hypothesis was in the right territory before I'd spoken to anyone.</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      Cold outreach to strangers with a clear, no-agenda ask converts better than you'd think — especially if you position yourself as a learner, not a seller. The community post was the most efficient market research I've ever done.
+    </div>
+  </div>
+</div>
+
+<div class="week-block">
+  <div class="week-label">Week 3</div>
+  <div class="week-title">Running 12 interviews — and the pattern I almost missed</div>
+  <div class="week-body">
+    <p>I ran 12 interviews in week 3, back-to-back, roughly two per day. Each was 25–30 minutes. I used the SheBlooms problem interview framework: no pitching, five core questions, score each interview on frequency, impact, and urgency.</p>
+    <p>By interview 8, a pattern I hadn't expected was emerging. The problem with proposals wasn't tracking interest — it was the time it took to create them. Every consultant I spoke to described spending 3–6 hours on each proposal, often for deals that didn't close. The follow-up problem I'd hypothesised was real but secondary. The proposal creation problem was primary.</p>
+    <p>I almost ignored this because it wasn't my original hypothesis. The consultants were telling me something I hadn't asked about. I started asking follow-up questions about proposals and the energy in the conversations changed entirely. One person said: "If I could get that time back, I'd take on two more clients. It's literally costing me revenue."</p>
+    <p>That sentence changed the direction of the company.</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      The most important data often comes from what you didn't ask about. Leave space for the unexpected. When the same unexpected topic comes up in 6 of 12 interviews, that's not noise — that's signal.
+    </div>
+  </div>
+</div>
+
+<div class="week-block">
+  <div class="week-label">Week 4</div>
+  <div class="week-title">Pivoting the hypothesis and running 10 more interviews</div>
+  <div class="week-body">
+    <p>I rewrote my problem statement: "Independent consultants with 3–8 active clients lose 4–6 hours per proposal because they have no reusable system — meaning they underquote to save time or lose time on proposals that don't close."</p>
+    <p>I ran 10 more interviews specifically targeting this new problem. This time, I focused on people who had 3+ years of experience as independent consultants — early-career consultants tend not to have enough clients to feel the problem acutely.</p>
+    <p>Of the 10 new interviews: 8 showed high pain severity. The two who didn't were consultants doing primarily repeat work with long-term clients who rarely needed new proposals. Not my ICP.</p>
+    <p>Running total: 22 interviews. 16 high pain severity. 73%. Above the 70% gate.</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      Pivoting your hypothesis mid-validation is not failure. It's the point. You're doing interviews to learn, not to confirm. The willingness to change direction based on evidence is what separates useful validation from confirmation bias.
+    </div>
+  </div>
+</div>
+
+<div class="week-block">
+  <div class="week-label">Week 5</div>
+  <div class="week-title">Building the "minimum viable proof" — without code</div>
+  <div class="week-body">
+    <p>With 22 interviews and a validated problem, I wanted to test whether people would actually do something about it — not just say they would. I built a landing page in Notion in two hours. It described the problem in their words (pulled from the interviews), outlined a simple solution concept, and had one button: "Join the waitlist."</p>
+    <p>I also created a manual "concierge MVP": I offered to help 3 consultants write their next proposal using a template system I'd built in Google Docs. No product. Just me, their brief, and a structured template. I charged €150 per proposal.</p>
+    <p>Two of the three said yes immediately. One paid before I'd finished explaining. That was the moment I stopped wondering whether this was a real business.</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      Payment is the strongest validation signal there is. Not "I would pay for this" — actual payment. Even a small amount, even for a manual service, proves that the problem is worth solving and that your frame of the solution is credible.
+    </div>
+  </div>
+</div>
+
+<div class="week-block">
+  <div class="week-label">Week 6</div>
+  <div class="week-title">The output: a decision with evidence</div>
+  <div class="week-body">
+    <p>At the end of week 6, I had: 22 interviews, 73% pain severity, 2 paying customers, 28 waitlist signups, and a clear problem statement I could defend with data.</p>
+    <p>I didn't have a product. I didn't have code. I didn't have investors or a team. What I had was the conviction that the problem was real — not because I believed it, but because 16 strangers had shown me it was real, and two of them had paid me to fix it manually.</p>
+    <p>I didn't go back to work.</p>
+    <div class="week-learning">
+      <div class="wl-label">Learning</div>
+      The goal of Stage 1 is not to have a product. It's to have a decision. Either "the evidence says this is real and I should build it," or "the evidence says this isn't urgent enough and I should find a different problem." Both are good outcomes. The worst outcome is continuing without evidence.
+    </div>
+  </div>
+</div>
+
+<div class="result-box">
+  <div><div class="result-num">22</div><div class="result-label">Interviews with strangers</div></div>
+  <div><div class="result-num">73%</div><div class="result-label">High pain severity rate</div></div>
+  <div><div class="result-num">2</div><div class="result-label">Paying customers before product</div></div>
+</div>
+
+<h2>What I'd do differently</h2>
+
+<p>I'd start looking for the unexpected signal from interview 1. I wasted a week chasing my original hypothesis when the real problem was there from the beginning. Pay attention to the moments when someone says something you didn't expect — those moments are worth more than any confirmation of what you already believed.</p>
+
+<p>I'd also run the concierge MVP in week 3, not week 5. Charging for a manual version of your solution is the fastest way to find out if the problem is worth solving. Two weeks earlier and I would have had twice as much paying-customer evidence by week 6.</p>
+
+<div class="callout">
+  <div class="callout-title">If you're at Stage 1 right now</div>
+  <p>You don't need to build anything for the first six weeks. You need 20+ interviews with strangers, a pain severity score, and one paying customer or signed LOI. Everything else can wait. The interviews will tell you what to build. Building before you know that is the most expensive mistake you can make.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">What this story teaches</div>
+  <ul>
+    <li>Start with a specific, falsifiable problem statement — not a category or a domain.</li>
+    <li>Interview strangers. Network responses are shaped by relationships, not experience.</li>
+    <li>The real problem often surfaces as an unexpected topic. Leave space for it.</li>
+    <li>Pivot the hypothesis when the data points elsewhere. This is the work, not a setback.</li>
+    <li>A manual "concierge MVP" and real payment is the fastest path to real validation.</li>
+    <li>The goal is a decision with evidence, not a product.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

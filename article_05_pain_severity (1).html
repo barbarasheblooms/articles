@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What "70% pain severity" actually means — and how to measure it · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.back{font-size:12px;color:var(--muted);text-decoration:none}.back:hover{color:var(--brand)}
+.stage-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);background:#eef0ff;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+.score-matrix{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:24px 0}
+.sm-cell{background:#fff;padding:14px 16px}
+.sm-cell.header{background:var(--ink);color:#fff}
+.sm-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#aaa;margin-bottom:4px}
+.sm-header .sm-label{color:#aaa}
+.sm-title{font-size:13px;font-weight:500}
+.sm-cell.header .sm-title{color:#fff}
+.sm-desc{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.5}
+.sm-cell.header .sm-desc{color:#aaa}
+.score-row-labels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:0 0 10px 10px;border-top:none;overflow:hidden;margin-top:-1px}
+.threshold-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;display:flex;gap:20px;align-items:flex-start;border:1px solid var(--border)}
+.threshold-num{font-family:'DM Serif Display',serif;font-size:52px;color:var(--brand);line-height:1;flex-shrink:0}
+.threshold-text{}
+.threshold-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.threshold-desc{font-size:14px;line-height:1.65;color:var(--ink)}
+.scoring-example{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:24px 0}
+.se-header{background:var(--ink);color:#fff;padding:11px 16px;font-size:12px;font-weight:500}
+.se-row{display:grid;grid-template-columns:200px 1fr 80px;border-bottom:1px solid var(--border);align-items:center}
+.se-row:last-child{border-bottom:none}
+.se-cell{padding:11px 16px;font-size:13px}
+.se-cell.name{font-weight:500}
+.se-cell.score{text-align:center;font-weight:600}
+.se-cell.score.high{color:#0f6e56}.se-cell.score.low{color:#dc2626}.se-cell.score.mid{color:#d97706}
+.bar-mini{height:4px;background:#e0e0db;border-radius:2px;overflow:hidden;margin-top:4px}
+.bar-mini-fill{height:100%;border-radius:2px}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+  <a href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank" class="back" style="color:var(--brand)">Problem Interview Template →</a>
+  
+</div>
+
+<span class="stage-tag">Stage 1 · Problem Validation Fit</span>
+<h1 class="article-title">What "70% pain severity" actually means — and how to measure it</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span><span class="byline-dot"></span>
+  <span>6 min read</span><span class="byline-dot"></span>
+  <span>Stage 1 · Gate task</span>
+</div>
+
+<p class="article-lead">The Stage 1 gate requires that 70% of your interviewees show high pain severity. This isn't a number you feel — it's a number you measure. Here's exactly what it means and how to track it.</p>
+
+<p>The 70% pain severity threshold is one of the most misunderstood requirements in Stage 1. Founders either treat it as a box to tick ("yes, lots of people have this problem") or they dismiss it as arbitrary. It's neither. It's a precise signal designed to answer a very specific question: is this problem painful enough that people will actually change their behaviour to solve it?</p>
+
+<p>That question matters because most problems are real but not urgent. People acknowledge them, complain about them, and then do nothing about them. Building a product for a problem that doesn't drive behaviour change is one of the most common reasons early startups stall.</p>
+
+<h2>Pain severity is three things, not one</h2>
+
+<p>The mistake most founders make is measuring pain as a single dimension — "how much does this bother them?" But pain severity is actually the intersection of three independent signals:</p>
+
+<div class="score-matrix">
+  <div class="sm-cell header">
+    <div class="sm-label">Dimension</div>
+    <div class="sm-title">What you're measuring</div>
+  </div>
+  <div class="sm-cell header">
+    <div class="sm-label">Low signal (1–2)</div>
+    <div class="sm-title">Not investable</div>
+  </div>
+  <div class="sm-cell header">
+    <div class="sm-label">High signal (4–5)</div>
+    <div class="sm-title">Investable</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-label">Frequency</div>
+    <div class="sm-title">How often does this happen?</div>
+    <div class="sm-desc">Weekly? Quarterly? Once a year?</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"It comes up occasionally" / can't recall last instance</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"It happens every time I try to do X" / "At least once a week"</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-label">Impact</div>
+    <div class="sm-title">How much does it cost?</div>
+    <div class="sm-desc">Time, money, opportunity, emotion</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"It's a bit annoying" / no concrete cost named</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"It costs me 4 hours a week" / "We lost a client because of this"</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-label">Urgency</div>
+    <div class="sm-title">How motivated are they to fix it now?</div>
+    <div class="sm-desc">Would they act today if a solution existed?</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"I'd probably try it someday" / passive interest</div>
+  </div>
+  <div class="sm-cell">
+    <div class="sm-desc">"I've been looking for something like this for months" / asked "when can I use it?"</div>
+  </div>
+</div>
+
+<p>To count as "high pain severity," an interviewee needs to show strong signals in at least two of the three dimensions — and the impact dimension is non-negotiable. An annoying problem that happens every day but costs nothing is still not investable.</p>
+
+<h2>Where the 70% comes from</h2>
+
+<div class="threshold-box">
+  <div class="threshold-num">70%</div>
+  <div class="threshold-text">
+    <div class="threshold-label">The threshold and why it matters</div>
+    <div class="threshold-desc">If fewer than 70% of your ICP interviewees show high pain severity, you have two possibilities: the problem isn't urgent enough for most people, or your ICP definition is too broad and includes people who have the problem lightly alongside those who have it acutely. Either way, you need to keep going — more interviews, tighter ICP, or a different problem framing.</div>
+  </div>
+</div>
+
+<p>The 70% isn't a magic number. It's a practical threshold that distinguishes "a problem that exists" from "a problem that drives action." Below 70%, you're likely building for the enthusiastic minority while the majority works around you or ignores you.</p>
+
+<h2>How to score it in practice</h2>
+
+<p>In each problem interview, score three dimensions on a 1–5 scale. An interviewee counts as "high severity" if their combined score is 10 or above (out of 15) and their impact score is 4 or 5.</p>
+
+<div class="scoring-example">
+  <div class="se-header">Example scoring from 6 interviews (out of 20)</div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 1 — Ana, solo founder</div>
+    <div class="se-cell">
+      Frequency 5 · Impact 5 · Urgency 4 = 14/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:93%;background:#0f6e56"></div></div>
+    </div>
+    <div class="se-cell score high">High ✓</div>
+  </div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 2 — Sofia, 2-person team</div>
+    <div class="se-cell">
+      Frequency 4 · Impact 5 · Urgency 3 = 12/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:80%;background:#0f6e56"></div></div>
+    </div>
+    <div class="se-cell score high">High ✓</div>
+  </div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 3 — Clara, post-revenue</div>
+    <div class="se-cell">
+      Frequency 2 · Impact 3 · Urgency 2 = 7/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:47%;background:#dc2626"></div></div>
+    </div>
+    <div class="se-cell score low">Low ✗</div>
+  </div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 4 — Inês, first-time founder</div>
+    <div class="se-cell">
+      Frequency 5 · Impact 4 · Urgency 5 = 14/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:93%;background:#0f6e56"></div></div>
+    </div>
+    <div class="se-cell score high">High ✓</div>
+  </div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 5 — Rita, accelerator alum</div>
+    <div class="se-cell">
+      Frequency 3 · Impact 3 · Urgency 3 = 9/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:60%;background:#d97706"></div></div>
+    </div>
+    <div class="se-cell score mid">Medium</div>
+  </div>
+  <div class="se-row">
+    <div class="se-cell name">Interview 6 — Marta, Series A founder</div>
+    <div class="se-cell">
+      Frequency 1 · Impact 2 · Urgency 1 = 4/15
+      <div class="bar-mini"><div class="bar-mini-fill" style="width:27%;background:#dc2626"></div></div>
+    </div>
+    <div class="se-cell score low">Low ✗</div>
+  </div>
+</div>
+
+<p>In this sample of 6, 3 interviewees score high — that's 50%. Below threshold. But notice the pattern: interviews 3 and 6 are post-revenue and Series A founders respectively. If the ICP is "pre-revenue, first-time founder," these two may be outside the target. Remove them, and 3 of 4 = 75%. Above threshold.</p>
+
+<p>This is why ICP definition and pain severity measurement are inseparable. Your score is only as meaningful as the quality of your sample.</p>
+
+<h2>What to do if you're at 50%</h2>
+
+<p>A 50% pain severity rate is one of the most useful results you can get, because it tells you something specific: the problem is real for some people, but not all people in your current sample. Your job is to figure out what the high-severity group has in common.</p>
+
+<ul>
+  <li>Look at the high-scorers: what's their stage, role, industry, situation?</li>
+  <li>Look at the low-scorers: what's different about them?</li>
+  <li>Reformulate your ICP to exclude the low-severity profiles.</li>
+  <li>Run the next 10 interviews targeting only the high-severity profile.</li>
+</ul>
+
+<p>If you do this and the rate climbs to 70%+, you've found your real ICP. If it stays flat regardless of who you interview, the problem may genuinely not be urgent enough — and that's a different conversation about whether to pivot.</p>
+
+<blockquote>
+  <p>"We were at 55% and getting frustrated. Then we noticed all our high-severity interviews were with founders who had already tried to raise and been rejected. We stopped interviewing founders who hadn't tried. The rate went to 82%."</p>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">Tracking tip</div>
+  <p>Keep a running tally as you go: total interviews, high-severity count, running percentage. You don't need to wait until interview 20 to check your rate. If you're at 8 interviews and only 2 are high-severity, that's 25% — an early signal to revisit your ICP before going further.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Pain severity is three dimensions: frequency, impact, and urgency. Impact is non-negotiable.</li>
+    <li>Score each interview. An interviewee counts as "high severity" if they score 10+/15 with an impact score of 4–5.</li>
+    <li>70%+ of your ICP interviews must be high severity to pass the Stage 1 gate.</li>
+    <li>If you're at 50%, the pattern of who scores high is more valuable than the average.</li>
+    <li>ICP definition and pain severity are inseparable — your rate is only valid for a well-defined ICP.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="article-footer">
+  <div class="footer-tag">Use with this template</div>
+  <a class="resource-link" href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank">Problem Interview Template →</a>
+</div>
+</div>
+</body>
+</html>
