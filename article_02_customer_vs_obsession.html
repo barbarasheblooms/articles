@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to run a problem interview that actually gives you data · SheBlooms</title>
+<title>The difference between a customer problem and a founder obsession · SheBlooms</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -12,40 +12,40 @@ body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size
 .page{max-width:680px;margin:0 auto;padding:48px 32px}
 .site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
 .logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
-.back{font-size:12px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:5px}
+.back{font-size:12px;color:var(--muted);text-decoration:none}
 .back:hover{color:var(--brand)}
-.article-meta{margin-bottom:32px}
 .stage-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);background:#eef0ff;padding:4px 10px;border-radius:20px;margin-bottom:14px}
 .article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
 .article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
 .byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
 .article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
 h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
-h3{font-size:16px;font-weight:600;color:var(--ink);margin:28px 0 10px}
 p{margin-bottom:20px;color:#1a1a18}
 ul,ol{margin:0 0 20px 22px}
 li{margin-bottom:8px;color:#1a1a18}
-strong{font-weight:600;color:var(--ink)}
-em{font-style:italic}
+strong{font-weight:600}
 blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
 blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
-blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.compare-table{width:100%;border-collapse:collapse;margin:28px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.compare-table th{padding:11px 16px;font-size:12px;font-weight:600;text-align:left}
+.compare-table th:first-child{background:#fef2f2;color:#991b1b;width:50%}
+.compare-table th:last-child{background:#f0fdf4;color:#166534;width:50%}
+.compare-table td{padding:11px 16px;border-top:1px solid var(--border);font-size:14px;vertical-align:top;line-height:1.6}
+.compare-table td:first-child{color:#7f1d1d;background:#fff8f8}
+.compare-table td:last-child{color:#14532d;background:#f9fdfb}
+.test-box{background:var(--soft);border-radius:10px;padding:20px 24px;margin:28px 0}
+.test-title{font-size:13px;font-weight:600;margin-bottom:14px}
+.test-item{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.test-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.test-q{font-size:14px;font-weight:500;flex:1;color:var(--ink)}
+.test-fail{font-size:12px;color:#991b1b;margin-top:4px}
+.test-pass{font-size:12px;color:#166534;margin-top:4px}
 .callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
 .callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
 .callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
 .key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
 .key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
 .key-points li{font-size:14px;margin-bottom:7px}
-.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
-.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
-.step-body{}
-.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
-.step-text{font-size:15px;color:#333;line-height:1.65}
-.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border)}
-.footer-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
-.resource-link{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:#eef0ff;border-radius:8px;font-size:13px;font-weight:500;color:#4f46e5;text-decoration:none;border:1px solid #d0d6ff}
-.resource-link:hover{background:#e0e4ff}
-@media print{.site-header .back{display:none}}
 </style>
 </head>
 <body>
@@ -53,146 +53,140 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
 
 <div class="site-header">
   <div class="logo">SheBlooms</div>
-  <a href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank" class="back" style="color:var(--brand)">Problem Interview Template →</a>
   
 </div>
 
-<div class="article-meta">
-  <span class="stage-tag">Stage 1 · Problem Validation Fit</span>
-  <h1 class="article-title">How to run a problem interview that actually gives you data</h1>
-  <div class="article-byline">
-    <span>By SheBlooms</span>
-    <span class="byline-dot"></span>
-    <span>8 min read</span>
-    <span class="byline-dot"></span>
-    <span>Stage 1 · Task #3</span>
+<span class="stage-tag">Stage 1 · Problem Validation Fit</span>
+<h1 class="article-title">The difference between a customer problem and a founder obsession</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span><span class="byline-dot"></span>
+  <span>7 min read</span><span class="byline-dot"></span>
+  <span>Stage 1 · Foundation</span>
+</div>
+
+<p class="article-lead">You built something you believed in. That's not a bug — it's what got you here. But somewhere between belief and building, many founders stop solving the customer's problem and start solving their own. Here's how to tell the difference.</p>
+
+<p>The most seductive trap in early-stage entrepreneurship isn't building the wrong product. It's building the right product for yourself, not for the market.</p>
+
+<p>Founder obsessions are powerful. They drive the relentless energy that early companies run on. The problem is that they can be completely disconnected from what customers actually need — and by the time you find out, you've spent months building something nobody will pay for.</p>
+
+<p>Understanding the difference is Stage 1's most important skill, and the one most rarely taught.</p>
+
+<h2>What a customer problem looks like</h2>
+
+<p>A customer problem exists independent of you. It existed before you arrived, it will exist if you disappear, and the people who have it are already trying (however badly) to solve it. They have workarounds. They have frustrations. They have numbers they could tell you — hours lost, money spent, opportunities missed.</p>
+
+<p>A customer problem also has a natural owner: the person who has it feels it as their problem, not as an abstract inconvenience that affects someone else. When you ask them about it, they don't need to think. They lean forward.</p>
+
+<h2>What a founder obsession looks like</h2>
+
+<p>A founder obsession is something you care deeply about, often for very good reasons. You've experienced it. You've read about it. You see it as a systemic failure that affects many people. The injustice of it bothers you.</p>
+
+<p>The problem is that deep personal conviction can masquerade as customer insight. You believe so strongly that the problem is real that you stop checking whether other people feel it the way you do — with the same intensity, the same urgency, the same willingness to act.</p>
+
+<p>Founder obsessions often produce beautiful products that serve almost no one, or that serve only the specific type of person the founder is.</p>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>Signs of a founder obsession</th>
+      <th>Signs of a customer problem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>You have to explain why this is a problem before they agree it's a problem</td>
+      <td>They describe the problem before you ask about it</td>
+    </tr>
+    <tr>
+      <td>Your interviewees agree it exists but can't remember the last time it affected them</td>
+      <td>They can tell you exactly when it last happened and how much it cost them</td>
+    </tr>
+    <tr>
+      <td>The people who care most about it are like you — same background, same values, same frustrations</td>
+      <td>A wide range of people with different backgrounds all feel it similarly</td>
+    </tr>
+    <tr>
+      <td>No one has a workaround because they don't need one</td>
+      <td>Everyone has a different workaround because nothing good exists yet</td>
+    </tr>
+    <tr>
+      <td>When you stop talking about it, the energy in the room drops</td>
+      <td>When you ask about it, the energy in the room rises</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>The three tests</h2>
+
+<div class="test-box">
+  <div class="test-title">Apply these three tests to your problem hypothesis:</div>
+
+  <div class="test-item">
+    <div>
+      <div class="test-q">Test 1: The stranger test<br><small style="font-weight:400;font-size:13px;color:#555">Can a stranger, unprompted, describe this problem back to you in their own words within 60 seconds of you asking about their experience in this area?</small></div>
+      <div class="test-fail">Fail signal: They need you to explain it. They agree once you've framed it, but they wouldn't have raised it themselves.</div>
+      <div class="test-pass">Pass signal: They start talking before you finish the question. They have specifics. You struggle to get a word in.</div>
+    </div>
+  </div>
+
+  <div class="test-item">
+    <div>
+      <div class="test-q">Test 2: The last-time test<br><small style="font-weight:400;font-size:13px;color:#555">Ask: "When was the last time this happened to you?" and "What did you do about it?"</small></div>
+      <div class="test-fail">Fail signal: They struggle to remember a specific instance. They give you a general impression. They haven't done anything about it.</div>
+      <div class="test-pass">Pass signal: They remember it clearly. They have context, numbers, frustration. They built a workaround or paid someone to fix it.</div>
+    </div>
+  </div>
+
+  <div class="test-item">
+    <div>
+      <div class="test-q">Test 3: The removal test<br><small style="font-weight:400;font-size:13px;color:#555">Ask: "If this problem disappeared tomorrow, what would change for you?"</small></div>
+      <div class="test-fail">Fail signal: The answer is vague — "it would be nice," "things would be easier." There's no concrete outcome on the other side.</div>
+      <div class="test-pass">Pass signal: The answer is immediate and specific — "I'd save eight hours a week," "I'd stop losing clients at this stage," "I'd finally be able to focus on growth."</div>
+    </div>
   </div>
 </div>
 
-<p class="article-lead">Most founders come out of problem interviews more convinced than when they went in. That's a red flag, not a green one. Here's how to run interviews that challenge your assumptions instead of confirming them.</p>
+<h2>The trap of the mission-driven founder</h2>
 
-<p>The problem interview is the most important thing you'll do at Stage 1 — and the most commonly done wrong. Founders leave feeling validated. They quote enthusiastic responses. They say "everyone I spoke to had this problem." And then they build something nobody uses.</p>
+<p>This distinction is particularly difficult for mission-driven founders — and most SheBlooms founders are mission-driven. When you care deeply about a cause (gender equity, access to capital, financial literacy), it can be hard to separate your mission from your customer's problem.</p>
 
-<p>The issue isn't that they spoke to the wrong people. It's that they asked the wrong questions, listened for the wrong signals, and walked away with stories instead of data.</p>
+<p>Your mission is why you're doing this. Your customer's problem is what you're building. They are not the same thing.</p>
 
-<p>Here's what actually works.</p>
-
-<h2>Before you start: the one rule that changes everything</h2>
-
-<p>Do not mention your solution. Not once. Not even as a hint. Not as "we're exploring something that might help with this." The moment you describe your product, the interview becomes a pitch evaluation, and the person in front of you becomes a polite audience trying not to hurt your feelings.</p>
-
-<p>You are there to understand their world. You are not there to sell them anything — not even an idea.</p>
-
-<p>This is harder than it sounds. You've been thinking about your solution for weeks. It's sitting right there. When they describe a pain that your product solves perfectly, every instinct tells you to say something. Don't. Take the note and keep asking questions.</p>
-
-<h2>Who to interview — and who not to</h2>
-
-<p>The most common sampling error: interviewing people who are easy to reach, not people who match your ICP. Friends, family, former colleagues, people in your network who are "kind of" in the target — these are the wrong interviewees. They'll be polite. They'll want to support you. They'll say "yes, that's a problem" because they like you.</p>
-
-<p>You need strangers. Specifically, strangers who match the profile you've defined as your Ideal Customer Profile. If you haven't defined your ICP yet, that's your first task — you can't run useful problem interviews without it.</p>
-
-<p>The Stage 1 gate requires 20+ interviews. That number exists because 5–10 interviews give you stories. Twenty or more start giving you patterns. And patterns are the only thing you can build on.</p>
-
-<h2>The five questions that actually work</h2>
-
-<p>A good problem interview is a conversation, not a questionnaire. But it has a spine. These five questions, in roughly this order, will get you what you need:</p>
-
-<div class="numbered-step">
-  <div class="step-num">1</div>
-  <div class="step-body">
-    <div class="step-title">"Tell me about your day-to-day in [relevant area]."</div>
-    <div class="step-text">Open wide. You're building context. You're letting them talk without leading them anywhere. Listen for the areas where they slow down, use stronger language, or sigh.</div>
-  </div>
-</div>
-
-<div class="numbered-step">
-  <div class="step-num">2</div>
-  <div class="step-body">
-    <div class="step-title">"What's the hardest part of [area]?"</div>
-    <div class="step-text">This is the first filter. If they struggle to answer — if the problem doesn't come out naturally — that's a data point. If they light up and have three things to say, that's a different data point.</div>
-  </div>
-</div>
-
-<div class="numbered-step">
-  <div class="step-num">3</div>
-  <div class="step-body">
-    <div class="step-title">"Walk me through the last time that happened."</div>
-    <div class="step-text">This is the most important question in the interview. You're asking for a story, not an opinion. Stories are factual. Opinions are aspirational. "I'd probably want something that does X" tells you nothing. "Last Tuesday I spent three hours doing Y because there was no other way" tells you everything.</div>
-  </div>
-</div>
-
-<div class="numbered-step">
-  <div class="step-num">4</div>
-  <div class="step-body">
-    <div class="step-title">"What do you do today to deal with it?"</div>
-    <div class="step-text">This reveals the competitive landscape better than any market research. It tells you what they're willing to pay (in time or money) to solve the problem right now. It also tells you how deeply the pain is felt — people build elaborate workarounds for things that really hurt them.</div>
-  </div>
-</div>
-
-<div class="numbered-step">
-  <div class="step-num">5</div>
-  <div class="step-body">
-    <div class="step-title">"If this problem disappeared tomorrow, what would change?"</div>
-    <div class="step-text">This reveals the real value on the other side of the pain. Most founders talk about features. Investors and customers care about outcomes. This question gives you the outcome.</div>
-  </div>
-</div>
-
-<h2>What to listen for — and what to ignore</h2>
-
-<p>There are two types of responses that should make you stop and write everything down:</p>
-
-<p><strong>Unprompted specificity.</strong> When someone gives you numbers without being asked — "I spend about four hours a week on this," "it costs us roughly €2,000 per client," "I've tried three different tools and none of them worked" — they're telling you the problem is real and felt. Vague answers ("yeah it's sometimes annoying") mean vague pain.</p>
-
-<p><strong>Self-built workarounds.</strong> If someone has built a spreadsheet, a Notion template, a manual process, or any kind of improvised solution to the problem, you've found something. People don't build workarounds for problems they don't care about. The worse the workaround, the bigger the opportunity.</p>
-
-<p>And two things to treat as warning signs:</p>
-
-<p><strong>Agreement without evidence.</strong> "Yes, that's definitely a problem" in response to a question you framed is not validation. You framed the question. They agreed. Ask them to tell you about a time it happened. If they can't, move on.</p>
-
-<p><strong>Future-tense language.</strong> "I would probably use that," "that would be really helpful," "I think people would love this" — all of these are hypothetical. The only thing that matters is what people have done, not what they say they would do.</p>
-
-<h2>The pattern you need to see</h2>
-
-<p>After 20 interviews, you should be able to answer three questions with evidence:</p>
-
-<ol>
-  <li><strong>Can you describe the problem in one sentence, using their language?</strong> Not your language — theirs. If you still need jargon or complex framing, you don't understand the problem well enough yet.</li>
-  <li><strong>Do 70%+ of the people you interviewed experience this problem at a frequency and intensity that would make them pay to fix it?</strong> This is the Stage 1 pain severity gate.</li>
-  <li><strong>Can you name the top three things they currently use to solve it?</strong> If you can't describe your competitive landscape from memory after 20 interviews, you were talking to the wrong people or asking the wrong questions.</li>
-</ol>
+<p>A founder building for female entrepreneurs because she believes in gender equity is mission-driven. But the product she builds still needs to solve a specific, felt, urgent problem that real customers will pay to resolve. "Supporting female founders" is a mission. "Helping female founders at the pre-seed stage build investor-grade evidence of demand" is a problem.</p>
 
 <blockquote>
-  <p>"I came in thinking I understood the problem. After the first ten interviews, I realised I'd been solving the symptom, not the cause. The interviews didn't validate my idea — they gave me a better one."</p>
-  <cite>— SheBlooms founder, Stage 2</cite>
+  <p>"I thought I understood the problem because I'd lived it. What I'd lived was one version of it. My customers were living six different versions, and the one I'd built for was the smallest."</p>
 </blockquote>
 
-<h2>A practical note on scheduling</h2>
+<h2>What to do if you suspect you have an obsession, not a problem</h2>
 
-<p>Twenty interviews sounds like a lot. At two per week, that's ten weeks. At four per week — two short calls per day, two days a week — that's five weeks. Most founders who struggle to reach 20 are booking them inefficiently, not lacking access. Ask every interviewee for one referral at the end of the call. Warm referrals convert at three times the rate of cold outreach.</p>
+<p>The good news: founder obsessions don't disqualify you. They often point toward a real problem — just not the exact one you're imagining. The path forward is almost always to interview more, listen more carefully, and be willing to let the problem statement change.</p>
+
+<p>Specifically:</p>
+<ul>
+  <li>Run 20+ interviews with strangers who match your ICP. Not people who know you, admire you, or share your values.</li>
+  <li>Actively look for disconfirmation. After each interview, write down the one thing that challenged your assumption.</li>
+  <li>Track how often people raise the problem unprompted versus how often you had to introduce it.</li>
+  <li>If the ratio is below 50% (you're framing it more often than they raise it), revisit the problem definition.</li>
+</ul>
 
 <div class="callout">
-  <div class="callout-title">Common mistake to avoid</div>
-  <p>Running a group interview or a focus group instead of one-on-ones. Groups create social pressure to agree. The loudest person in the room shapes everyone else's answers. One-on-ones give you 20 independent data points. Groups give you one.</p>
+  <div class="callout-title">The reframe that helps</div>
+  <p>Stop asking "is this a real problem?" and start asking "is this a problem that this specific person, right now, would pay to solve?" The first question invites philosophical agreement. The second question requires evidence.</p>
 </div>
 
 <div class="key-points">
   <div class="key-points-title">Key takeaways</div>
   <ul>
-    <li>Never mention your solution during a problem interview.</li>
-    <li>Interview strangers who match your ICP, not people who know you.</li>
-    <li>Ask for stories about the last time the problem happened, not opinions about what they'd want.</li>
-    <li>Specificity and self-built workarounds are the strongest signals of real pain.</li>
-    <li>You need 20+ interviews before patterns emerge. Two per week gets you there in ten weeks.</li>
-    <li>The output is three things: a one-sentence problem statement in their language, a pain severity rate, and a competitive landscape.</li>
+    <li>A customer problem exists independently of you. A founder obsession exists because of you.</li>
+    <li>The difference shows up in interviews: customer problems get raised unprompted; obsessions need framing.</li>
+    <li>Apply the three tests: stranger test, last-time test, removal test.</li>
+    <li>Mission-driven founders are especially at risk — your mission is why you build, not what you build.</li>
+    <li>Obsessions don't disqualify you. They often point toward the real problem. Keep interviewing and keep listening.</li>
   </ul>
 </div>
 
-
-
-<div class="article-footer">
-  <div class="footer-tag">Use with this template</div>
-  <a class="resource-link" href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank">Problem Interview Template →</a>
-</div>
 </div>
 </body>
 </html>
