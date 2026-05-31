@@ -43,6 +43,25 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 .result-box{background:var(--ink);color:#fff;border-radius:12px;padding:22px 24px;margin:28px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
 .result-num{font-family:'DM Serif Display',serif;font-size:32px;line-height:1;color:var(--brand)}
 .result-label{font-size:11px;color:#aaa;margin-top:4px;line-height:1.4}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .compare-table{display:block;overflow-x:auto}
+  .two-col{grid-template-columns:1fr}
+  .score-matrix{display:block;overflow-x:auto}
+  .numbered-step{flex-direction:column;gap:8px}
+  .diff-grid{grid-template-columns:1fr}
+  .test-box .test-item{flex-direction:column}
+  .narrowing{font-size:13px}
+  .resource-link{width:100%;justify-content:center}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
 </style>
 </head>
 <body>
