@@ -51,6 +51,25 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 .narrow-step:not(:first-child){border-top:none}
 .narrow-arrow{font-size:12px;color:var(--muted);flex-shrink:0;margin-left:auto}
 .narrow-step:last-child .narrow-arrow{display:none}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .compare-table{display:block;overflow-x:auto}
+  .two-col{grid-template-columns:1fr}
+  .score-matrix{display:block;overflow-x:auto}
+  .numbered-step{flex-direction:column;gap:8px}
+  .diff-grid{grid-template-columns:1fr}
+  .test-box .test-item{flex-direction:column}
+  .narrowing{font-size:13px}
+  .resource-link{width:100%;justify-content:center}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
 </style>
 </head>
 <body>
