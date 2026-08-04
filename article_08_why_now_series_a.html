@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The "why now" argument: proving your problem's timing at Series A · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.back{font-size:12px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:5px}
+.back:hover{color:var(--brand)}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">The "why now" argument: proving your problem's timing at Series A</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">By Series A, nobody is asking whether the problem is real anymore. The question changes to: why is this the moment to fund a company built around it? Here's how to build the timing argument investors are actually listening for.</p>
+
+<p>If you find yourself re-explaining that the problem exists at a Series A meeting, something has gone wrong before you even walked in. By this stage, your existence as a company with paying customers and real traction is the proof the problem is real. Investors have moved on to a different, sharper question: why does this window stay open, and why does it stay open long enough to justify a large round at this valuation?</p>
+
+<p>This is the "why now" argument, and it's one of the most under-prepared parts of Series A decks. Founders spend weeks polishing traction slides and forget that timing is its own argument, one that needs its own evidence.</p>
+
+<h2>Why re-litigating the problem reads as a step backward</h2>
+
+<p>Series A investors are pattern-matching against founders who already know how to run a company at this stage. Spending slide time re-establishing that the problem exists signals one of two things to them: either the founder hasn't internalised how far the company has come, or the traction data isn't strong enough to make the case on its own, so the deck falls back on the earlier argument.</p>
+
+<p>Neither reading helps you. The fix isn't to drop the problem slide, it's to change what it argues. At Series A, the problem slide's job is to explain why the window for building a large company around this problem is open now, and why it will likely close for whoever isn't already moving.</p>
+
+<h2>The three forces that open a timing window</h2>
+
+<p>Almost every credible "why now" argument is built from one or more of three forces. Naming which one applies to you, with evidence, is the core of this slide.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Regulatory or structural shift</div>
+  </div>
+  <div class="force-body">
+    <p>A law, standard, or industry requirement changed recently, creating a new obligation or removing an old barrier. These windows are usually the most defensible because they're documented and dated, and because they force adoption rather than merely encouraging it.</p>
+    <div class="force-example"><div class="force-example-label">What this looks like:</div>New disclosure requirements, a licensing change, a new compliance deadline, or the removal of a legal barrier that previously blocked a business model.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Behaviour change</div>
+  </div>
+  <div class="force-body">
+    <p>The people who have the problem have changed how they work, buy, or make decisions, in a way that makes your solution newly relevant or newly acceptable. Behaviour shifts are harder to prove than regulation, so they need real usage data or adoption curves, not just an assertion that "things are changing."</p>
+    <div class="force-example"><div class="force-example-label">What this looks like:</div>A shift to remote or hybrid work changing how teams collaborate, a generational change in who makes purchasing decisions, or a category (like async communication, or self-serve procurement) crossing from early adopters into the mainstream.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">New technology or infrastructure</div>
+  </div>
+  <div class="force-body">
+    <p>A new technology (often one you don't own, like a foundation model, a payments rail, or an API) makes a previously uneconomical solution viable for the first time. This is the most common argument in software right now, and also the easiest to overuse: the technology existing is not enough, you need to show why your specific use of it is newly possible or newly cheap.</p>
+    <div class="force-example"><div class="force-example-label">What this looks like:</div>A cost curve that made your unit economics viable only in the last 12-18 months, or a new platform capability that removed a technical blocker your predecessors couldn't get past.</div>
+  </div>
+</div>
+
+<h2>Building the evidence, not just the narrative</h2>
+
+<p>A "why now" slide without evidence reads as a narrative device, something any founder could say about any problem. What makes it credible is the same discipline you already apply to traction: dates, sources, and trend lines.</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Assertion only (weak)</div>
+    <ul>
+      <li>"The market is shifting toward self-serve"</li>
+      <li>"AI is changing everything about this industry"</li>
+      <li>"Regulation is becoming stricter"</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Evidenced timing argument (strong)</div>
+    <ul>
+      <li>"Self-serve adoption in our category grew from 12% to 41% of new deals between 2024 and 2026 (source: [industry report])"</li>
+      <li>"Inference cost for the model class we depend on fell 85% in 18 months, moving our per-customer cost from unviable to €0.40/month"</li>
+      <li>"The new disclosure rule takes effect in Q3 2027; 60% of our target customers have no compliant workflow in place yet"</li>
+    </ul>
+  </div>
+</div>
+
+<p>Notice that each strong example includes a number, a timeframe, and (where possible) a named source. That combination is what separates a timing argument from a timing opinion.</p>
+
+<h2>Proving the problem is growing, not shrinking</h2>
+
+<p>The final piece investors are checking for is whether the underlying problem is getting bigger over time, not smaller. This matters because a Series A round is a bet on the next 3-5 years, not just the current pain point. If the trend line on the problem itself is flat or declining, no amount of current traction fixes that.</p>
+
+<ul>
+  <li>Pull the same metric you used to quantify the problem at Seed (cost per customer, frequency, or volume) and show its trajectory over the last 18-24 months.</li>
+  <li>If you don't have your own multi-year data yet, pair your own recent trend with a credible third-party forecast for the category.</li>
+  <li>Be honest if a force that helped you at Seed is fading, investors will find this in diligence regardless, and naming it yourself is far more credible than having it discovered.</li>
+</ul>
+
+<div class="example-box">
+  <div class="example-label">Worked example: structuring the slide</div>
+  <div class="example-text">
+    <strong>Force:</strong> Behaviour change, independent consultants increasingly manage client relationships without an agency layer.<br><br>
+    <strong>Evidence:</strong> Independent consulting grew 34% in our core segment between 2023 and 2026 (source: national freelance census). Our own funnel shows inbound demand from solo consultants up 3x over six quarters.<br><br>
+    <strong>Why the window stays open:</strong> Enterprise CRM tools remain priced and built for teams of 10+, so this segment is structurally underserved by incumbents whose cost structure depends on seat-based pricing.<br><br>
+    <strong>Trend:</strong> The proportion of our new customers coming from solo consultants (versus small agencies) rose from 40% to 68% over the last four quarters, indicating the segment itself, not just our distribution, is growing.
+  </div>
+</div>
+
+<blockquote>
+  <p>"Our Series A deck used to spend a slide re-explaining the problem. Once we replaced it with the regulatory deadline and the adoption curve, the same investors who'd passed twice took the meeting a third time and led the round."</p>
+</blockquote>
+
+<h2>What to do if you can't find a strong "why now"</h2>
+
+<p>Not every company has a clean regulatory or technology trigger. If that's you, look harder at behaviour change data you may already have: cohort-over-cohort shifts in who buys, how they buy, or how fast they adopt. A steadily improving adoption curve inside your own customer base, especially one that correlates with a market-wide shift, is often enough on its own.</p>
+
+<p>What doesn't work is skipping the argument entirely and hoping traction speaks for itself. Traction proves the problem was solvable. Timing is what proves the window is still open for the capital being raised.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>Finish this sentence with a number and a date: "This window opened around [date], because [specific regulatory, behavioural, or technological change], and evidence it's still open is [specific trend]." If you can't complete it with specifics, that's the gap to close before your next round of investor meetings.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>At Series A, the problem slide's job shifts from proving the problem exists to proving the timing window is still open.</li>
+    <li>Almost every credible "why now" argument rests on regulatory shift, behaviour change, or new technology, name which one applies to you.</li>
+    <li>Back the argument with dates, sources, and trend lines, not just narrative; assertions without evidence read as opinion.</li>
+    <li>Show that the underlying problem is growing, not shrinking, using the same metric you quantified at Seed.</li>
+    <li>Be honest about fading tailwinds, investors will find them in diligence regardless.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_08_why_now_series_a';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

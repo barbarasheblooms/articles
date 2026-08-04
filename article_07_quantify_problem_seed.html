@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to quantify what the problem actually costs your customers · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.back{font-size:12px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:5px}
+.back:hover{color:var(--brand)}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.formula-box{background:var(--ink);color:#fff;border-radius:12px;padding:22px 24px;margin:28px 0}
+.formula-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#aaa;margin-bottom:10px}
+.formula-text{font-family:'DM Serif Display',serif;font-size:19px;line-height:1.5;color:#fff}
+.formula-text .var{color:#a5b4ff}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to quantify what the problem actually costs your customers</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">At Pre-Seed, an interview quote was enough. At Seed, investors want a number: what does this problem cost your paying customers today, and how much of that cost does your product remove? Here's how to build that number from data you already have.</p>
+
+<p>"Founders lose revenue at the proposal stage because they have no system for tracking follow-ups" is a Pre-Seed sentence. It describes a problem qualitatively, backed by interviews. By Seed, that sentence needs a number attached to it, and the number needs to come from your own paying customers, not from a market report or a survey.</p>
+
+<p>This is one of the most common gaps in Seed pitch decks. Founders keep pitching the problem the way they did at Pre-Seed: real, painful, validated by conversations. But by Seed, you have something interviews never gave you: usage data from people who pay you. That data is far more convincing than any quote, and most founders simply forget to build it into the story.</p>
+
+<h2>Why "it's a real problem" stops being enough</h2>
+
+<p>At Pre-Seed, investors are checking whether the problem exists and whether it's urgent enough to act on. Qualitative evidence, interviews, waitlists, survey responses, is the right tool for that job, because there's no product yet to generate anything else.</p>
+
+<p>At Seed, you have paying customers. If the problem is real and urgent, their behaviour inside your product should show it: how much time or money they were losing before, how often they hit the pain point, what they do differently now. Investors want to see that behavioural signal because it's harder to fake than an opinion, and because it lets them model the size of the value you're capturing.</p>
+
+<p>Skipping this step and re-using Pre-Seed language is one of the clearest markers of a founder who hasn't yet made the shift from validating an idea to running a business.</p>
+
+<h2>The three numbers that matter</h2>
+
+<div class="formula-box">
+  <div class="formula-title">The problem-quantification formula</div>
+  <div class="formula-text"><span class="var">Cost per customer</span> × <span class="var">number of customers in your ICP</span> = <span class="var">total addressable cost of the problem</span>. Your product's job is to show how much of that cost you remove.</div>
+</div>
+
+<p>Three numbers turn a qualitative problem statement into a quantitative one:</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Cost per customer, before you</div>
+    <div class="step-text">How much time, money, or missed revenue did a customer lose to this problem before using your product? This should come from customer-reported baselines, onboarding surveys, or before/after comparisons, not from assumption.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Aggregate cost across your paying base</div>
+    <div class="step-text">Multiply the per-customer cost by the number of customers who share the same profile. This is what tells an investor the size of the pain you're addressing, not just that it exists.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">The delta your product closes</div>
+    <div class="step-text">Of that cost, how much does your product actually remove? This is the number that connects the problem slide to your value proposition, and it's the number investors will use to sanity-check your pricing.</div>
+  </div>
+</div>
+
+<h2>Where to find this data without building new instrumentation</h2>
+
+<p>Most Seed-stage founders assume they need new analytics to answer this, but the data usually already exists in three places:</p>
+
+<ul>
+  <li><strong>Onboarding conversations.</strong> If you ask new customers what they were doing before (a spreadsheet, a competitor, a manual process), their answers usually include a rough cost. Start logging these systematically instead of letting them disappear into sales notes.</li>
+  <li><strong>Usage data inside your product.</strong> Time spent on the task your product replaces, frequency of the action your product accelerates, or volume of the output your product generates are all proxies for the value being captured.</li>
+  <li><strong>Support and churn conversations.</strong> Customers who almost churn, or who complain about a limitation, often state the cost of the problem explicitly when explaining why a feature matters to them. These are free, high-quality data points most founders never mine.</li>
+</ul>
+
+<h2>Turning the number into the pitch line</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Pre-Seed framing (no longer enough)</div>
+    <ul>
+      <li>"Consultants told us proposals take too long"</li>
+      <li>"Founders said follow-ups fall through the cracks"</li>
+      <li>"Everyone we spoke to had this problem"</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Seed framing (data from paying customers)</div>
+    <ul>
+      <li>"Our 80 customers reported losing 4.2 hours per proposal before SheBlooms; that's €340 in billable time at their average rate"</li>
+      <li>"Across our base, that's €27K/month in recovered billable hours"</li>
+      <li>"Our product recovers 70% of that time; customers keep the other 30% as a service quality improvement"</li>
+    </ul>
+  </div>
+</div>
+
+<p>Notice the second column never stops being about the customer. It doesn't lead with your product; it leads with the cost, and only then explains how much of it your product removes. That ordering matters: investors are evaluating the size of the problem first, and your solution's fit to it second.</p>
+
+<div class="example-box">
+  <div class="example-label">Worked example</div>
+  <div class="example-text">
+    <strong>Baseline cost:</strong> 68 of 80 customers reported spending 4-6 hours per proposal before adopting the product (average: 4.8 hours).<br><br>
+    <strong>Per-customer cost:</strong> 4.8 hours × €85/hour average billing rate = €408 per proposal. At an average of 3.2 proposals/month, that's €1,306/customer/month.<br><br>
+    <strong>Aggregate cost across the paying base:</strong> €1,306 × 80 customers = €104,480/month in time value at risk across the customer base.<br><br>
+    <strong>Delta captured:</strong> Product usage data shows proposal creation time drops from 4.8 hours to 1.4 hours post-adoption, a 71% reduction. Applied to the aggregate: ~€74,000/month in recovered value delivered across the base.
+  </div>
+</div>
+
+<h2>What "confirmed in practice" really means to an investor</h2>
+
+<p>When the Seed-stage investor question is "has the problem been confirmed in practice, do paying customers validate the thesis," they are checking for two things at once: that people are paying you specifically because this cost is real to them, and that your own data (not survey data) proves the cost existed and that you're reducing it.</p>
+
+<p>This is also why churn matters here. If customers who leave cite this problem as unresolved or say the cost wasn't as high as expected, that's a signal worth including, not hiding. Investors trust founders who show the edges of their data as much as the center of it.</p>
+
+<blockquote>
+  <p>"We stopped saying 'founders lose time on this' and started saying 'our 80 customers are collectively losing €104K a month in billable time to this problem, and we're recovering 71% of it.' That was the version that got the term sheet."</p>
+</blockquote>
+
+<h2>A note on relevance and urgency at Seed</h2>
+
+<p>The third question at this stage, "why is this problem relevant and urgent," should now be answered by trend, not by assertion. If the cost per customer is growing (more competition for their time, higher opportunity cost, more proposals per month), say so and show the trend line. A shrinking cost is a real risk to flag internally, even if you decide not to lead with it in the pitch.</p>
+
+<div class="callout">
+  <div class="callout-title">Where to start if you have no baseline data yet</div>
+  <p>Add one question to your onboarding flow: "What were you doing before, and roughly how much time or money did that cost you per month?" Even a rough, self-reported number from your next 20 customers gives you a defensible baseline within a few weeks, and it costs you nothing to start collecting today.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>At Seed, the problem needs a number attached to it, sourced from paying customers, not from interviews or market reports.</li>
+    <li>Three numbers matter: cost per customer, aggregate cost across your ICP, and the delta your product actually closes.</li>
+    <li>Mine onboarding conversations, usage data, and churn conversations, the data usually already exists.</li>
+    <li>Lead with the customer's cost, not your product; the size of the problem comes before the fit of the solution.</li>
+    <li>Show the trend on cost per customer to answer "why is this urgent now" with evidence, not assertion.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_07_quantify_problem_seed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
