@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to turn a validated problem into a solution hypothesis · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to turn a validated problem into a solution hypothesis</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">Validating a problem tells you it's worth solving. It does not tell you what to build. Here's the bridge most founders skip, and the framework that keeps your solution anchored to the evidence you already have.</p>
+
+<p>If you ran the problem interviews, you now have something valuable: quotes, patterns, a pain point you can defend with data. The mistake many founders make next is jumping straight to a feature list, one that often reflects what they personally find interesting to build rather than what the evidence actually points to. The step in between, turning validated pain into a solution worth testing, has its own method. Skipping it is why so many founders end up with a well-built product that solves a problem slightly different from the one they validated.</p>
+
+<h2>Start from the insight, not from a feature idea</h2>
+
+<p>Go back to your problem interview notes before you open a whiteboard for solutions. The insight you're looking for is usually a specific sentence: what the person was actually trying to accomplish, what got in their way, and what workaround they use today. That sentence is your anchor. Every solution idea you generate should trace back to it directly.</p>
+
+<div class="example-box">
+  <div class="example-label">A usable insight looks like this</div>
+  <div class="example-text">"Founders don't lack investor lists, they lack a way to know which investors are actually a fit for their stage. Today they cold-email 200 VCs and get a 2% response rate, because they can't tell in advance who would say yes."</div>
+</div>
+
+<h2>Reframe the insight as a How Might We question</h2>
+
+<p>How Might We (HMW) is a simple reframing technique, originally popularized in design thinking, that turns a validated pain point into an open, generative question. It works because it's specific enough to stay anchored to the evidence, but open enough to allow more than one possible solution.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Take the insight apart</div>
+    <div class="step-text">Identify the who, the obstacle, and the desired outcome separately. In the example above: who is the solo founder raising a first round; the obstacle is not knowing which investors fit; the outcome is reaching the right investor without wasting 200 cold emails.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Rebuild it as "How might we..."</div>
+    <div class="step-text">"How might we help solo founders know, before they reach out, which investors are actually likely to fund their stage and sector?" Notice this doesn't presuppose an answer, it opens the door to several different solution shapes.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">Write three to five variants</div>
+    <div class="step-text">Reframe the same insight from different angles (removing the obstacle, shortcutting the outcome, changing who does the work) to avoid anchoring on the first idea that comes to mind.</div>
+  </div>
+</div>
+
+<h2>Generate solution concepts against each question, not against your favorite idea</h2>
+
+<p>For each How Might We question, list two or three genuinely different ways it could be answered, before picking one. This is the step that prevents founders from building the solution they wanted to build all along and retrofitting the problem to justify it.</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Skips the bridge</div>
+    <ul>
+      <li>"We validated the problem, so let's build the app I already had in mind"</li>
+      <li>One idea considered, no alternatives generated</li>
+      <li>Solution concept doesn't reference the original insight anywhere</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Uses the bridge</div>
+    <ul>
+      <li>Two or three concepts generated per How Might We question</li>
+      <li>Each concept traces back to the specific obstacle in the insight</li>
+      <li>The concept chosen is the one with the smallest, cheapest way to test it</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Pick the smallest test before you build anything</h2>
+
+<p>The point of this bridge isn't to arrive at certainty, it's to arrive at your cheapest next test. Before committing engineering time, ask what the smallest version of this solution concept would be: a manual, concierge version; a landing page describing the offer; a clickable prototype used in five more customer conversations. If the concept doesn't survive that small test, it's cheaper to find out now than after the MVP is built.</p>
+
+<blockquote>
+  <p>"We had validated the problem for months before we realized we'd never written down the How Might We question. Once we did, the answer we'd been building toward wasn't even in our top three."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">The bridge in four steps</div>
+  <p>Start from a specific, validated insight, not a feature idea. Reframe it as one or more How Might We questions. Generate two or three real solution concepts per question before choosing one. Pick the smallest, cheapest way to test the concept before building it.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>A validated problem tells you what's worth solving, not what to build, that step still needs its own method.</li>
+    <li>How Might We questions reframe a specific pain point into an open, testable design question.</li>
+    <li>Generate multiple solution concepts per question before committing to one, to avoid retrofitting the problem to a favorite idea.</li>
+    <li>Every solution concept should trace back to the specific insight it answers.</li>
+    <li>Test the smallest version of the concept before investing in a build.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_12_problem_to_solution_preseed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
