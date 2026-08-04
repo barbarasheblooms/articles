@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to prove product-market fit and defensibility at scale · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to prove product-market fit and defensibility at scale</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>8 min read</span>
+</div>
+
+<p class="article-lead">Series A investors assume your product works. What they're evaluating is whether it keeps working, and keeps winning, once you're five times the size. Here's how to make that case with evidence instead of confidence.</p>
+
+<p>The solution slide changes shape again at Series A. Nobody is asking whether the product functions anymore, that's assumed. The real questions are whether product-market fit is real and durable, whether your edge gets stronger or weaker as you grow, and whether the experience holds up once usage multiplies well past what it is today.</p>
+
+<h2>Demonstrate product-market fit, don't assert it</h2>
+
+<p>"We have strong product-market fit" is a sentence every Series A founder says. It only means something when it's followed by evidence an investor can independently sanity-check.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Retention that holds or improves by cohort</div>
+    <div class="step-text">Show retention curves across multiple cohorts, not just the average. Flattening curves over time are one of the strongest PMF signals available.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Organic or referral-driven growth</div>
+    <div class="step-text">Customers actively bringing in other customers, without being paid to, is a signal that's very hard to manufacture and very convincing when real.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">Usage depth and frequency</div>
+    <div class="step-text">Are customers using more of the product over time, more often, across more of their team? Expanding usage inside existing accounts is a stronger signal than new-logo growth alone.</div>
+  </div>
+</div>
+
+<h2>Shift the defensibility argument to what happens at scale</h2>
+
+<p>At Seed, naming one defensibility mechanism with early evidence was enough. At Series A, the question is sharper: does this advantage get stronger as you grow, or could a well-funded competitor close the gap once they see you're working?</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Weakens with scale</div>
+    <ul>
+      <li>An advantage based purely on being first to market</li>
+      <li>A feature set a funded competitor could rebuild in two quarters</li>
+      <li>Execution speed alone, with no structural moat behind it</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Strengthens with scale</div>
+    <ul>
+      <li>A data set that compounds in value with every new customer</li>
+      <li>Network effects where more users make the product better for everyone</li>
+      <li>Switching costs that deepen the longer a customer stays</li>
+    </ul>
+  </div>
+</div>
+
+<p>Be specific about which category applies and show the trend, is the moat visibly strengthening quarter over quarter, or is it a story that hasn't actually been tested against competitive pressure yet?</p>
+
+<h2>Prove the user experience holds up under real scale</h2>
+
+<p>A demo in a curated sales call is not evidence that the product works at scale. Series A investors want proof that performance, reliability, and support quality hold up as usage multiplies, since this is exactly where many products quietly degrade.</p>
+
+<div class="example-box">
+  <div class="example-label">What this evidence looks like</div>
+  <div class="example-text">Uptime and latency benchmarks under real production load. Support ticket volume per customer, and whether that ratio is improving or worsening as you grow. NPS or CSAT trends segmented by account size or tenure, not just an overall average.</div>
+</div>
+
+<h2>The roadmap's job is now to sustain, not to prove basic competence</h2>
+
+<p>By this stage, the roadmap should be read as a defensibility plan, what specifically gets built to widen the gap between you and anyone chasing you, not a general list of improvements. Tie every major roadmap item back to the moat category you named.</p>
+
+<blockquote>
+  <p>"We stopped presenting our roadmap as 'more features' and started presenting it as 'how the data advantage compounds every quarter'. That reframing is what made the defensibility conversation credible."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">A structure that holds at Series A</div>
+  <p>PMF evidence across multiple cohorts, not a single average. One named, trending defensibility mechanism, with data showing it strengthening over time. Proof the experience holds up at real scale: uptime, support ratios, satisfaction by segment. A roadmap framed as widening the moat, not adding features.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Prove product-market fit with cohort retention and organic growth signals, not a single confident sentence.</li>
+    <li>Name whether your defensibility mechanism strengthens or weakens as you scale, and show the trend.</li>
+    <li>Bring evidence that UX, uptime, and support quality hold up under real production load.</li>
+    <li>Frame the roadmap as widening the moat, not simply adding more features.</li>
+    <li>A demo in a sales call is not proof the product works at scale, production data is.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_11_pmf_defensibility_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

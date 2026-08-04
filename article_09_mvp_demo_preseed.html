@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to present an MVP that isn't finished yet · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to present an MVP that isn't finished yet</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">Most Pre-Seed founders either hide how early their product is, or apologise for it. Both read badly. Here's how to show a rough MVP in a way that makes investors trust your execution instead of doubting it.</p>
+
+<p>By the time you're pitching Pre-Seed, you usually have something: a working prototype, a rough MVP, maybe a handful of screens that only half work. The instinct is to either polish it into something it isn't, or to talk around it with slides instead of showing it. Both approaches cost you credibility.</p>
+
+<p>Investors at this stage are not evaluating whether your product is finished. They're evaluating whether you can be trusted to build the rest of it. That's a different question, and it changes what "showing the solution" should actually look like.</p>
+
+<h2>Show it, don't describe it</h2>
+
+<p>A screenshot or a 30-second screen recording will always beat a bullet-point description of what your product does. This isn't about production value, a phone recording of a real screen is fine. What matters is that investors see the actual thing, not your interpretation of it.</p>
+
+<p>If you don't have anything to show yet, that itself is information worth stating plainly: "we have a clickable prototype, here's the flow" is a perfectly credible sentence at Pre-Seed. What isn't credible is a slide full of mockups presented as if they were live product, or language vague enough to hide the fact that nothing has been built.</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as evasive</div>
+    <ul>
+      <li>"Our platform seamlessly connects X and Y" (no screenshot)</li>
+      <li>A polished mockup with no label saying it's a mockup</li>
+      <li>"We're building an AI-powered solution for..." with no demo</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as credible</div>
+    <ul>
+      <li>"Here's our working prototype" + actual screen recording</li>
+      <li>"This is a clickable Figma prototype, the backend ships in March"</li>
+      <li>A labelled screenshot of the real, unpolished interface</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Name your stage honestly</h2>
+
+<p>There are really only three honest answers to "what stage is the product in": idea, prototype, or MVP. Each one is fine to say out loud at Pre-Seed. What isn't fine is answering a different question than the one being asked, dressing up an idea as an MVP, or describing a prototype as if it were shipped.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Idea stage</div>
+    <div class="step-text">No product yet, but a clear plan and possibly a clickable prototype or wireframes. Investors will weigh this heavily on team and market evidence, since there's nothing else yet to show.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Prototype</div>
+    <div class="step-text">Something a user can click through, even if the backend is fake or manual. This is enough to demo a flow and get reactions, but say plainly that it isn't production-ready.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">MVP</div>
+    <div class="step-text">Real users, real (if rough) functionality, even if it's held together with manual workarounds behind the scenes. Say what's automated and what isn't, investors respect the distinction more than they penalise it.</div>
+  </div>
+</div>
+
+<h2>The roadmap is part of the pitch, not an appendix</h2>
+
+<p>Because the product is early, the roadmap carries more weight at Pre-Seed than it will at any later stage. Investors are asking, implicitly, "if I fund this, what happens in the next six months?" A vague roadmap ("we'll keep building features") answers nothing. A dated, specific roadmap shows you already know what to build next and why.</p>
+
+<div class="example-box">
+  <div class="example-label">Weak roadmap line</div>
+  <div class="example-text">"Over the next few months we'll add more features and improve the user experience."</div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">Strong roadmap line</div>
+  <div class="example-text">"By month 2 we ship automated matching (currently manual). By month 4, in-app messaging replaces the current email handoff. By month 6, we open self-serve onboarding, removing the founder from every signup."</div>
+</div>
+
+<h2>Always close the loop back to the problem</h2>
+
+<p>A solution slide that doesn't reference the problem it solves reads as a product looking for a reason to exist. Every description of what the product does should trace back, in the same breath, to the specific pain it removes and for whom. This is what separates a feature list from a solution.</p>
+
+<blockquote>
+  <p>"We stopped showing screenshots and started showing screenshots next to the workaround they replace. That one change made the demo land completely differently."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">A simple structure that works</div>
+  <p>One sentence naming the problem and who has it. One screenshot or short recording of the actual product. One sentence on what stage it's at, said plainly. Three to four dated roadmap milestones. That's the whole slide, and it's more convincing than most 6-bullet versions founders default to.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>A real screenshot or short recording always beats a described feature list.</li>
+    <li>Name your stage plainly: idea, prototype, or MVP, none of them need an apology.</li>
+    <li>A dated, specific roadmap carries real weight when the product itself is still early.</li>
+    <li>Every solution description should trace back to the specific problem and person it serves.</li>
+    <li>The whole slide can be four elements: problem line, demo, honest stage, dated roadmap.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_09_mvp_demo_preseed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
