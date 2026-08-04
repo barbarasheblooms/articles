@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to size your market from the bottom up · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to size your market from the bottom up</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">Investors do not expect a perfect number at Pre-Seed. They expect a methodology they can trust, and bottom-up beats top-down every time.</p>
+
+
+<p>Most first-time founders open a market-sizing slide with a Gartner or Statista figure: a $50B industry number pulled from a report, with no visible connection to the actual business being built. Investors have seen this slide hundreds of times, and it tells them almost nothing except that the founder has not yet done the harder, more useful calculation.</p>
+
+<h2>Start from your ICP, not from an industry report</h2>
+
+<p>Bottom-up sizing starts with a number you can actually defend: how many people or companies match your Ideal Customer Profile, multiplied by what they would realistically pay you. Everything else, SAM and TAM, is built by zooming out from that number, not the other way around.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Count your ICP precisely</div>
+    <div class="step-text">Define the ICP narrowly enough that you could plausibly name real companies or people who fit it, then find or estimate how many of them exist in your initial market.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Multiply by a realistic price</div>
+    <div class="step-text">Use your actual or intended price point, not an aspirational one. This gives you SOM: the number you can realistically capture in the next 2 to 3 years.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">Zoom out to SAM, then TAM</div>
+    <div class="step-text">SAM widens the ICP definition to the full addressable segment within reach (e.g. all of Southern Europe rather than one country); TAM widens further to the full category globally. Both should still trace back to the same per-customer economics.</div>
+  </div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">A defensible bottom-up chain</div>
+  <div class="example-text">"There are approximately 40,000 female founders actively fundraising in Southern Europe (SOM population). At €1,200/year, that is a €48M SOM. Widening to all of Europe, SAM is roughly 180,000 founders, or €216M. TAM, all female founders globally who will fundraise, is in the low billions."</div>
+</div>
+
+<h2>Name your competitors and the timing argument in the same breath</h2>
+
+<p>A market-sizing slide that never mentions competitors reads as naive. Name the two or three most relevant direct or indirect alternatives, briefly, and pair the market number with a one-line argument for why now: a regulatory shift, a behavior change, a cost curve, anything that explains why this market is opening up at this moment rather than five years ago or five years from now.</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as unresearched</div>
+    <ul>
+      <li>A single large TAM number with no calculation shown</li>
+      <li>Sourced entirely from a third-party industry report</li>
+      <li>No competitors named, no timing argument</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as credible</div>
+    <ul>
+      <li>SOM built from your own ICP count and price</li>
+      <li>SAM and TAM shown as zoom-outs from that same number</li>
+      <li>Competitors named and a one-line timing argument included</li>
+    </ul>
+  </div>
+</div>
+
+<blockquote>
+  <p>"The first time we showed a bottom-up number instead of a market report slide, an investor stopped us mid-pitch to say it was the first market slide that week he actually believed."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">The chain investors want to see</div>
+  <p>ICP defined specifically enough to count. SOM calculated as ICP count times realistic price. SAM and TAM as zoom-outs from that same number, not separate research citations. Competitors named. One clear sentence on market timing.</p>
+</div>
+
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Start from your ICP count and real price, not an industry report figure.</li>
+    <li>SOM comes first: it is the number you can defend in a room.</li>
+    <li>SAM and TAM should zoom out from the same calculation, not cite unrelated sources.</li>
+    <li>Name your competitors briefly, even at Pre-Seed.</li>
+    <li>Pair the market number with a one-line argument for why the timing favors you now.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_13_bottom_up_market_sizing_preseed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

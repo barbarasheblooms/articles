@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to back your market size with your own cohort data · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to back your market size with your own cohort data</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">At Seed, a market slide sourced entirely from third-party research reads as unproven. Your own retention and expansion numbers are what make the size claim credible now.</p>
+
+
+<p>The bottom-up calculation that worked at Pre-Seed is still the foundation, but by Seed it is no longer enough on its own. You now have real customers and real usage data, and investors expect that data to show up directly in how you justify the size of the opportunity.</p>
+
+<h2>Let retention and expansion validate the size, not just the count</h2>
+
+<p>A market size built purely on customer count assumes every customer behaves the same way and stays forever. Your actual cohort data, retention over time, and expansion revenue within existing accounts either supports that assumption or contradicts it. Show the data that supports it.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Retention as evidence of durable demand</div>
+    <div class="step-text">If customers are staying and renewing, the addressable market is not just a headcount, it is a headcount that converts into durable revenue. Show your retention curve alongside the market number.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Expansion as evidence the price point holds</div>
+    <div class="step-text">If existing customers are upgrading or buying more, it validates that your assumed price per customer in the SOM calculation is not just theoretical, it is what real customers are actually willing to pay over time.</div>
+  </div>
+</div>
+
+<h2>Name competitors with clear differentiation, not just a list</h2>
+
+<p>At Pre-Seed, naming competitors was enough. At Seed, investors want the differentiation stated specifically: not just who else exists, but why customers are choosing you over them, ideally with a data point (win rate, switching customers, retention versus the alternative).</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Still reads as Pre-Seed</div>
+    <ul>
+      <li>Market size unchanged since the last round, no new data referenced</li>
+      <li>Competitors listed with no differentiation stated</li>
+      <li>No link between traction and the market claim</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as Seed-ready</div>
+    <ul>
+      <li>Retention and expansion data shown alongside the market number</li>
+      <li>Differentiation from named competitors stated with evidence</li>
+      <li>A plan for scaling within the market, not just the current size</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">Cohort-backed sizing</div>
+  <div class="example-text">"SAM: 180,000 founders at €1,200/year (€216M). Our first cohort shows 71% 12-month retention and 22% net expansion from add-on services, supporting that this price point holds over time, not just at signup."</div>
+</div>
+
+<blockquote>
+  <p>"The market slide stopped being a research citation and became a retention chart. That single change is what got the Seed conversation moving."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">What Seed investors check</div>
+  <p>The same bottom-up SOM/SAM/TAM chain, now paired with your own retention and expansion data. Competitors named with specific, evidenced differentiation. A stated plan for scaling within this market, tied to the traction you have already shown.</p>
+</div>
+
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Pair your bottom-up market number with real retention and expansion data.</li>
+    <li>Retention supports the durability of demand; expansion supports the price assumption.</li>
+    <li>Name competitors with specific, evidenced differentiation, not just a list.</li>
+    <li>Link your traction numbers directly to the market size claim.</li>
+    <li>State a concrete plan for scaling within the market you have sized.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_14_cohort_backed_market_sizing_seed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

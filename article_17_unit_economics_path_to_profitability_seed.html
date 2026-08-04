@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to build real CAC, LTV and a path to profitability · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to build real CAC, LTV and a path to profitability</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">At Seed, 'we think unit economics will work' is not an answer. Investors want real CAC and LTV data, and a specific, credible path to positive economics.</p>
+
+
+<p>The rough estimates that were acceptable at Pre-Seed need to become real numbers by Seed, calculated from actual customer cohorts rather than back-of-envelope guesses. The business model slide's job is to show the model is not just functioning today, but that it is moving toward, or already at, profitability.</p>
+
+<h2>Calculate CAC, LTV and payback period from real cohorts</h2>
+
+<p>Use actual spend and actual customer behavior, not blended estimates across every channel you have ever tried. Break it down by channel where possible, since a blended CAC can hide a channel that is quietly unprofitable.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">CAC by channel, not blended</div>
+    <div class="step-text">Calculate the fully loaded cost (ad spend, tooling, time) per channel, and be honest about which channels are working and which are not.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">LTV from actual retention curves</div>
+    <div class="step-text">Use your real churn and expansion data to project LTV, rather than an assumed customer lifetime. If your retention curve has not stabilized yet, say so and show the trend.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">Payback period as the health check</div>
+    <div class="step-text">How many months does it take to recover CAC from gross margin per customer? This single number is often what investors scan for first.</div>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as unproven</div>
+    <ul>
+      <li>Blended CAC across every channel, hiding weak spots</li>
+      <li>LTV based on assumed lifetime, not real retention data</li>
+      <li>No stated path to profitability, just current numbers</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as Seed-ready</div>
+    <ul>
+      <li>CAC broken down by channel with real spend data</li>
+      <li>LTV calculated from actual cohort retention curves</li>
+      <li>A specific path to break-even with named milestones</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">A credible Seed unit economics statement</div>
+  <div class="example-text">"Blended CAC: €120. Content-driven CAC: €40; paid CAC: €210 (we are pausing this channel). LTV from actual 12-month retention: €420. Payback period: 4.2 months. Path to break-even: month 14 at current growth rate."</div>
+</div>
+
+<blockquote>
+  <p>"Once we broke CAC down by channel, we realized one channel was quietly losing money on every customer. Killing it improved our blended number overnight."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">What Seed investors check</div>
+  <p>CAC by channel, not blended. LTV from real cohort retention, not an assumed lifetime. A stated payback period. A specific path to break-even, with a milestone and a date, not just an aspiration.</p>
+</div>
+
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Calculate CAC by channel, not blended, to avoid hiding an unprofitable channel.</li>
+    <li>Base LTV on real retention curves, not an assumed customer lifetime.</li>
+    <li>State your payback period clearly, it is often the first number investors scan for.</li>
+    <li>Show a specific path to break-even with a milestone and a date.</li>
+    <li>Explain your pricing strategy, not just your current price.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_17_unit_economics_path_to_profitability_seed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

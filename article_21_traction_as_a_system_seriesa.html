@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to prove your traction is a system, not a lucky spike · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to prove your traction is a system, not a lucky spike</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>7 min read</span>
+</div>
+
+<p class="article-lead">At Series A, the traction slide needs to prove consistency built from repeatable channels, backed by cohort-level data, not a single strong quarter.</p>
+
+
+<p>By Series A, everything else in the deck supports this one slide. Investors are looking for evidence that growth is a system that will keep producing results, rather than a spike created by a single campaign, press mention, or unsustainable discount.</p>
+
+<h2>Show three or more months of consistent growth</h2>
+
+<p>Consistency across several consecutive months from repeatable channels is worth more than a single dramatic spike. State your MoM growth against the common SaaS reference range of 15 to 20%+, and be honest about which channels produced it.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div>
+    <div class="step-title">Net revenue retention above 100%</div>
+    <div class="step-text">This shows your existing customer base is growing in value even before a single new customer is added, a strong signal of a durable, expanding business rather than one dependent purely on new acquisition.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div>
+    <div class="step-title">Churn below the common benchmark</div>
+    <div class="step-text">State monthly churn against the common SaaS reference of below 5%, and show the trend, is it improving as the product matures, or stuck.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div>
+    <div class="step-title">Cohort-level CAC, LTV and payback</div>
+    <div class="step-text">Show these numbers by cohort, not as a single blended figure, so investors can see whether unit economics are improving as your product and channels mature.</div>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as a spike</div>
+    <ul>
+      <li>One strong month attributed to a single campaign or press hit</li>
+      <li>No net revenue retention or churn benchmark stated</li>
+      <li>Blended CAC and LTV with no cohort-level detail</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as a system</div>
+    <ul>
+      <li>3+ months of consistent MoM growth from repeatable channels</li>
+      <li>Net revenue retention above 100%, monthly churn below 5%</li>
+      <li>Cohort-level CAC, LTV and payback data, showing the trend</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">A traction statement that reads as a system</div>
+  <div class="example-text">"18%, 19%, 17% and 20% MoM growth over the last 4 months, driven by content and referral, not a single campaign. Net revenue retention: 112%. Monthly churn: 3.8%, improving from 5.1% two quarters ago."</div>
+</div>
+
+<blockquote>
+  <p>"We stopped showing the one great month from the product launch and started showing the four boring, consistent months after it. That's what convinced them growth was systemic."</p>
+  <cite>SheBlooms founder</cite>
+</blockquote>
+
+<div class="callout">
+  <div class="callout-title">What Series A investors check</div>
+  <p>3+ months of consistent MoM growth from repeatable channels. Net revenue retention above 100%. Monthly churn below 5%, with an improving trend. CAC, LTV and payback backed by real, cohort-level data, not blended estimates.</p>
+</div>
+
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Show 3+ consecutive months of growth from repeatable channels, not a single spike.</li>
+    <li>State net revenue retention, ideally above 100%.</li>
+    <li>Report monthly churn against the sub-5% SaaS benchmark, with a trend.</li>
+    <li>Use cohort-level CAC, LTV and payback data, not a blended snapshot.</li>
+    <li>This is the center of the Series A conversation; everything else supports it.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_21_traction_as_a_system_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
