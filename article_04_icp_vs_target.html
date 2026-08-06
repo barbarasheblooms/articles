@@ -70,6 +70,12 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
   blockquote{padding:12px 14px}
   blockquote p{font-size:16px}
 }
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
 </style>
 </head>
 <body>
@@ -77,20 +83,33 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 
 <div class="site-header">
   <div class="logo">SheBlooms</div>
+  <a href="https://sheblooms-templates.vercel.app/SB_Task07_ICP_Canvas.html" target="_blank" class="back" style="color:var(--brand)">ICP Definition Canvas →</a>
 
 </div>
 
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+
+<span class="stage-tag">Stage 1 · Problem Validation Fit · Task 07</span>
 <h1 class="article-title">ICP vs. target market: why the distinction will save you months</h1>
 <div class="article-byline">
   <span>By SheBlooms</span><span class="byline-dot"></span>
-  <span>6 min read</span>
+  <span>6 min read</span><span class="byline-dot"></span>
+  <span>Stage 1 · Task #7</span>
 </div>
 
 <p class="article-lead">A target market is a category. An ICP is a specific person you can picture, find, and call. Most early-stage founders have the first but not the second — and it's costing them months of building in the wrong direction.</p>
 
 <p>Ask most founders who their customer is and you'll get an answer that sounds like a market segment: "female entrepreneurs," "small business owners," "HR managers at mid-size companies." These answers aren't wrong, but they're not useful. They describe a category of people, not the specific person whose problem is so acute that they'll pay you to solve it today.</p>
 
-<p>The Ideal Customer Profile isn't a marketing concept. It's a validation tool. It tells you who to interview, what to build first, and how to talk about it. Getting it right early on is one of the highest-leverage things you can do.</p>
+<p>The Ideal Customer Profile isn't a marketing concept. It's a validation tool. It tells you who to interview, what to build first, and how to talk about it. Getting it right at Stage 1 is one of the highest-leverage things you can do.</p>
 
 <h2>Target market vs. ICP: the actual difference</h2>
 
@@ -128,7 +147,7 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 
 <h2>How to narrow your ICP without guessing</h2>
 
-<p>The ICP isn't something you decide — it's something you discover. Your job now is to interview enough people that the pattern of who feels the problem most acutely becomes visible. Then you build for that person first.</p>
+<p>The ICP isn't something you decide — it's something you discover. Your job at Stage 1 is to interview enough people that the pattern of who feels the problem most acutely becomes visible. Then you build for that person first.</p>
 
 <div class="narrowing">
   <div class="narrow-step">Start broad: "female founders in Europe" <span class="narrow-arrow">↓</span></div>
@@ -187,6 +206,13 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
   </ul>
 </div>
 
+
+
+
+<div class="article-footer">
+  <div class="footer-tag">Use with this template</div>
+  <a class="resource-link" href="https://sheblooms-templates.vercel.app/SB_Task07_ICP_Canvas.html" target="_blank">ICP Definition Canvas →</a>
+</div>
 </div>
 
 <script>
@@ -204,6 +230,73 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
     },
     body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
   }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
 })();
 </script>
 

@@ -62,6 +62,12 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
   blockquote{padding:12px 14px}
   blockquote p{font-size:16px}
 }
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
 </style>
 </head>
 <body>
@@ -72,15 +78,28 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 
 </div>
 
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+
+<span class="stage-tag">Stage 2 · Product Market Fit · Task 20</span>
 <span class="story-tag">Founder story</span>
 <h1 class="article-title">How I validated my idea in 6 weeks without building anything</h1>
 <div class="article-byline">
   <span>SheBlooms Community</span>
   <span class="byline-dot"></span>
   <span>9 min read</span>
+  <span class="byline-dot"></span>
+  <span>Stage 1 · Full journey</span>
 </div>
 
-<div class="author-note">This is a founder story from the SheBlooms community. It reflects one founder's experience validating her problem. Details have been kept general to protect her privacy.</div>
+<div class="author-note">This is a founder story from the SheBlooms community. It reflects one founder's experience of Stage 1. Details have been kept general to protect her privacy.</div>
 
 <p class="article-lead">I had an idea, no product, and six weeks before I had to go back to work. Here's the exact week-by-week process I used to figure out whether I was building something people would pay for — before writing a single line of code.</p>
 
@@ -174,7 +193,7 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
     <p>I didn't go back to work.</p>
     <div class="week-learning">
       <div class="wl-label">Learning</div>
-      The goal right now is not to have a product. It's to have a decision. Either "the evidence says this is real and I should build it," or "the evidence says this isn't urgent enough and I should find a different problem." Both are good outcomes. The worst outcome is continuing without evidence.
+      The goal of Stage 1 is not to have a product. It's to have a decision. Either "the evidence says this is real and I should build it," or "the evidence says this isn't urgent enough and I should find a different problem." Both are good outcomes. The worst outcome is continuing without evidence.
     </div>
   </div>
 </div>
@@ -192,7 +211,7 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
 <p>I'd also run the concierge MVP in week 3, not week 5. Charging for a manual version of your solution is the fastest way to find out if the problem is worth solving. Two weeks earlier and I would have had twice as much paying-customer evidence by week 6.</p>
 
 <div class="callout">
-  <div class="callout-title">If you're validating your problem right now</div>
+  <div class="callout-title">If you're at Stage 1 right now</div>
   <p>You don't need to build anything for the first six weeks. You need 20+ interviews with strangers, a pain severity score, and one paying customer or signed LOI. Everything else can wait. The interviews will tell you what to build. Building before you know that is the most expensive mistake you can make.</p>
 </div>
 
@@ -225,6 +244,73 @@ blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:
     },
     body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
   }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
 })();
 </script>
 

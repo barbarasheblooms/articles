@@ -65,6 +65,12 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
   blockquote{padding:12px 14px}
   blockquote p{font-size:16px}
 }
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
 </style>
 </head>
 <body>
@@ -72,20 +78,35 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
 
 <div class="site-header">
   <div class="logo">SheBlooms</div>
+  <a href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank" class="back" style="color:var(--brand)">Problem Interview Template →</a>
+
 </div>
 
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+
 <div class="article-meta">
+  <span class="stage-tag">Stage 1 · Problem Validation Fit · Task 03</span>
   <h1 class="article-title">How to run a problem interview that actually gives you data</h1>
   <div class="article-byline">
     <span>By SheBlooms</span>
     <span class="byline-dot"></span>
     <span>8 min read</span>
+    <span class="byline-dot"></span>
+    <span>Stage 1 · Task #3</span>
   </div>
 </div>
 
 <p class="article-lead">Most founders come out of problem interviews more convinced than when they went in. That's a red flag, not a green one. Here's how to run interviews that challenge your assumptions instead of confirming them.</p>
 
-<p>The problem interview is the most important thing you'll do early on, and the most commonly done wrong. Founders leave feeling validated. They quote enthusiastic responses. They say "everyone I spoke to had this problem." And then they build something nobody uses.</p>
+<p>The problem interview is the most important thing you'll do at Stage 1 — and the most commonly done wrong. Founders leave feeling validated. They quote enthusiastic responses. They say "everyone I spoke to had this problem." And then they build something nobody uses.</p>
 
 <p>The issue isn't that they spoke to the wrong people. It's that they asked the wrong questions, listened for the wrong signals, and walked away with stories instead of data.</p>
 
@@ -105,7 +126,7 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
 
 <p>You need strangers. Specifically, strangers who match the profile you've defined as your Ideal Customer Profile. If you haven't defined your ICP yet, that's your first task — you can't run useful problem interviews without it.</p>
 
-<p>Passing this gate requires 20+ interviews. That number exists because 5–10 interviews give you stories. Twenty or more start giving you patterns. And patterns are the only thing you can build on.</p>
+<p>The Stage 1 gate requires 20+ interviews. That number exists because 5–10 interviews give you stories. Twenty or more start giving you patterns. And patterns are the only thing you can build on.</p>
 
 <h2>The five questions that actually work</h2>
 
@@ -171,13 +192,13 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
 
 <ol>
   <li><strong>Can you describe the problem in one sentence, using their language?</strong> Not your language — theirs. If you still need jargon or complex framing, you don't understand the problem well enough yet.</li>
-  <li><strong>Do 70%+ of the people you interviewed experience this problem at a frequency and intensity that would make them pay to fix it?</strong> This is the pain severity gate.</li>
+  <li><strong>Do 70%+ of the people you interviewed experience this problem at a frequency and intensity that would make them pay to fix it?</strong> This is the Stage 1 pain severity gate.</li>
   <li><strong>Can you name the top three things they currently use to solve it?</strong> If you can't describe your competitive landscape from memory after 20 interviews, you were talking to the wrong people or asking the wrong questions.</li>
 </ol>
 
 <blockquote>
   <p>"I came in thinking I understood the problem. After the first ten interviews, I realised I'd been solving the symptom, not the cause. The interviews didn't validate my idea — they gave me a better one."</p>
-  <cite>SheBlooms founder</cite>
+  <cite>— SheBlooms founder, Stage 2</cite>
 </blockquote>
 
 <h2>A practical note on scheduling</h2>
@@ -201,6 +222,12 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
   </ul>
 </div>
 
+
+
+<div class="article-footer">
+  <div class="footer-tag">Use with this template</div>
+  <a class="resource-link" href="https://sheblooms-templates.vercel.app/SB_Task03_Pain_Interviews.html" target="_blank">Problem Interview Template →</a>
+</div>
 </div>
 
 <script>
@@ -218,6 +245,73 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
     },
     body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
   }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
 })();
 </script>
 
