@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Series A problem checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to read the Series A problem checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>6 min read</span>
+</div>
+
+<p class="article-lead">At Series A, all four checklist lines are really one question asked four different ways: not "is the problem real," but "why does this window stay open long enough to justify this round." Here is what each line is actually checking for.</p>
+
+<p>The Series A problem checklist looks short: four lines. But each one is a specific test of whether your timing argument is sound, and it's easy to tick a box with language that sounds right without the substance an investor is actually scoring behind it. This guide walks through all four lines individually.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Timing ("why now") argument stated, not the fundamentals restated</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking that you've actually swapped arguments, not just softened the old one. "Why now" is a different claim than "why this problem." If your slide could have been shown at Seed with no changes, this line isn't done, no matter how well-written the problem description is.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Adding a sentence like "and this problem is more urgent than ever" to the end of an otherwise unchanged Seed-era problem slide, without a distinct timing claim behind it.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A slide that leads with a dated trigger and a trend, not a restated pain point: "This window opened in [date] because [specific change], and it's still open because [specific trend]."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Structural shift identified: regulation, behavior change, or technology</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking that your timing argument is anchored to one of a small number of forces investors recognize as durable, rather than a vague sense that "the market is moving." Naming the specific force, and only one usually needs to carry the argument, is what separates a structural shift from a marketing line.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Naming multiple forces vaguely ("regulation, changing behavior, and new AI tools are all converging") without evidence for any single one, which reads as hedging rather than a sharp argument.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>One force, named specifically, with a date: "A new disclosure rule takes effect in Q3 2027; 60% of our target customers have no compliant workflow yet." For a full breakdown of the three forces and how to evidence each, see <a href="https://sheblooms-articles.vercel.app/article_08_why_now_series_a.html">The "why now" argument: proving your problem's timing at Series A</a>.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Evidence the problem is growing, not shrinking, over time</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking for a trend line, not a snapshot. A single strong data point about the problem's current size satisfies "the problem is real," but says nothing about direction. Investors are underwriting the next 3-5 years, so a flat or declining trend on the underlying problem undercuts everything else on the slide.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Reusing the same cost-per-customer figure from the Seed slide as if it were still current, with no comparison point showing whether it has moved.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>The same metric used to quantify the problem at Seed, tracked over 18-24 months: "cost per customer has grown from €X to €Y since [date]" or "the segment experiencing this problem grew from N to M over four quarters."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Framed as a window that is open now, not indefinitely</div>
+  </div>
+  <div class="force-body">
+    <p>This is the line most founders skip entirely, because it asks you to argue against your own upside: that the opportunity will not stay wide open forever, and that funding you now is what lets you capture it before it closes. A timing argument without an expiry implicitly reads as "there's no rush," which undermines the urgency of the round itself.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Presenting the opportunity as permanently large and open, with no discussion of who else could close the window, or what happens if the round is delayed.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A specific closing condition: "if we are not the category-defining tool for this within 18 months, a generalist platform absorbs it as a feature" or "the regulatory grace period ends in [date], after which early movers will already own the compliant customer relationships."</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"This problem is more urgent than ever" (no distinct claim from Seed)</li>
+      <li>"Regulation, behavior, and technology are all shifting" (no single evidenced force)</li>
+      <li>Same cost figure as the Seed deck, no comparison over time</li>
+      <li>"This is a massive, growing opportunity" (no closing condition)</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"Window opened [date] because [specific trigger], still open because [specific trend]"</li>
+      <li>One named force, dated, with a source</li>
+      <li>"Cost per customer grew from €X to €Y over 18 months" (source cited)</li>
+      <li>"If we're not the category leader in 18 months, a generalist absorbs this as a feature"</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four is the same: a specific claim, backed by a date or a trend, that could not have appeared unchanged on last round's slide. If a line could be copy-pasted from your Seed deck without editing, it is not yet doing the job the Series A checklist is asking of it.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>Read your problem slide out loud and ask: could this exact wording have been said a year ago, at Seed? If yes for any line, that line is restating the fundamentals, not making the timing argument this checklist requires.</p>
+</div>
+
+<p>For the underlying framework on naming and evidencing the timing force itself, see <a href="https://sheblooms-articles.vercel.app/article_08_why_now_series_a.html">The "why now" argument: proving your problem's timing at Series A</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Problem_SeriesA_WhyNowCanvas.html">Why Now: Timing Argument Canvas</a> to structure it directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>All four checklist lines test one thing: has the argument actually shifted from "the problem exists" to "the window is open now."</li>
+    <li>Naming one structural force with evidence beats gesturing at several without any.</li>
+    <li>"Growing, not shrinking" requires a trend over time, not a repeated snapshot from the Seed deck.</li>
+    <li>A timing argument needs a closing condition, what happens if the window shuts before you're funded.</li>
+    <li>If a line could be copy-pasted unedited from last round's deck, it isn't done yet.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_38_problem_checklist_guide_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>

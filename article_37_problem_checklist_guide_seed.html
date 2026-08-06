@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Seed problem checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<h1 class="article-title">How to read the Seed problem checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>6 min read</span>
+</div>
+
+<p class="article-lead">A checklist item is a compressed question. Ticking the box without unpacking what's behind it is the fastest way to walk into a Seed meeting with a slide that looks finished but isn't.</p>
+
+<p>The Seed problem checklist has four lines. Each one reads as a short instruction, but each is really shorthand for a specific thing an investor is trying to verify. This guide unpacks all four: what the line is actually asking, the most common way founders satisfy the letter of it without satisfying the substance, and what a genuinely complete answer looks like.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Problem quantified with your own customer data, not just interviews</div>
+  </div>
+  <div class="force-body">
+    <p>At Pre-Seed, interview quotes were enough. At Seed, the checklist is asking you to move from "people told us this hurts" to "here is a number, sourced from our own paying customers, that says how much." The word doing the work here is <strong>own</strong>: a market report or a competitor's public numbers do not satisfy this line, no matter how relevant they are.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Restating the Pre-Seed interview findings with slightly more confident language, without any new number pulled from actual usage or onboarding data since customers started paying.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A specific figure (hours, euros, error rate, missed revenue) with a stated source: "onboarding survey, N=52 of 80 customers" or "in-product usage logs, last 90 days."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Cost to customers stated as a concrete number</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking that the quantification from line one is actually usable in conversation. A number buried in a footnote or expressed only as a range ("a few hours a week, roughly") does not read as concrete. Investors want a figure they can repeat back to you, and eventually to their partners.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Quantifying the problem once, deep in the appendix or the write-up, but never surfacing a single headline number on the actual slide.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>One sentence that could stand alone: "This costs our average customer €X per month" or "Our customers lose N hours a week to this before adopting us." If you can't finish that sentence today, this line isn't done yet, regardless of what the interviews said.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Paying customers confirm the thesis in practice</div>
+  </div>
+  <div class="force-body">
+    <p>This is the line most often confused with line one. Quantifying the cost is a data exercise; confirming the thesis "in practice" means showing that customers are behaving in a way that proves the problem was real and worth paying to solve, not just describing it accurately when asked.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Treating a satisfaction survey score as proof, when what actually confirms the thesis is behavioral: renewal, usage frequency, upgrade rate, or customers voluntarily citing the problem as their reason for buying.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A behavioral signal tied explicitly to the problem: "71% of customers who cited [the problem] in onboarding have since renewed or upgraded" or "customers who report the highest cost from this problem also show the highest usage frequency."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Why this problem is still relevant and urgent explained</div>
+  </div>
+  <div class="force-body">
+    <p>This carries over from Pre-Seed, but the bar moves. At Pre-Seed, urgency could rest on interview language ("she said she needed this yesterday"). At Seed, the checklist wants urgency grounded in a trend, ideally the same data you used to quantify the cost: is the cost per customer flat, growing, or shrinking since you started measuring it?</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Reusing the Pre-Seed urgency framing word-for-word, with no reference to how the problem has moved (or hasn't) since customers started paying.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A one-line trend statement: "cold-outreach conversion for our segment fell from 2.1% to 1.6% over the last 12 months," directly tied to the same metric used elsewhere on the slide.</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"Customers told us this is a real problem" (still interview-based)</li>
+      <li>"It costs them a meaningful amount of time" (no number)</li>
+      <li>"Customers are happy with the product" (satisfaction, not behavior)</li>
+      <li>Urgency language copied from the Pre-Seed slide, unchanged</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"Onboarding data (N=52 of 80) shows customers spent 4.8 hrs/month on this before us"</li>
+      <li>"That time is worth roughly €280/month at their own billable rate"</li>
+      <li>"71% who cited this problem at onboarding have since upgraded"</li>
+      <li>"Cost per customer is not falling: conversion dropped from 2.1% to 1.6% in 12 months"</li>
+    </ul>
+  </div>
+</div>
+
+<p>Notice the pattern: every item on the right names a source, a number, and where relevant, a comparison over time. That triad, source, number, trend, is what an investor is really scanning for behind each checklist line, whether or not the checklist says so explicitly.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For each of the four lines, try to finish this sentence: "We know this because [source], and the number is [figure]." If you can complete all four sentences without hedging, the checklist item is genuinely done. If you're reaching for adjectives instead of numbers, it isn't yet, even if the box is ticked in the app.</p>
+</div>
+
+<p>For the mechanics of turning customer conversations into the actual cost number this checklist asks for, see <a href="https://sheblooms-articles.vercel.app/article_07_quantify_problem_seed.html">How to quantify what the problem actually costs your customers</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Problem_Seed_CostQuantificationWorksheet.html">Problem Cost Quantification Worksheet</a> directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Each checklist line is a compressed question; unpack what it's actually verifying before deciding it's done.</li>
+    <li>"Own customer data" excludes market reports and competitor numbers, however relevant, it must come from your paying base.</li>
+    <li>A concrete cost figure needs to work as a standalone sentence, not sit buried in an appendix.</li>
+    <li>"Confirms the thesis in practice" means behavioral evidence (renewal, usage, upgrades), not satisfaction scores.</li>
+    <li>Urgency at Seed needs a trend line, not a repeat of the Pre-Seed interview quote.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_37_problem_checklist_guide_seed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
