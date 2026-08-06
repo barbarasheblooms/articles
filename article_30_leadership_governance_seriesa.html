@@ -62,6 +62,12 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
   blockquote{padding:12px 14px}
   blockquote p{font-size:16px}
 }
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
 </style>
 </head>
 <body>
@@ -69,6 +75,15 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
 
 <div class="site-header">
   <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
 </div>
 
 <h1 class="article-title">How to show you can run a bigger operation: leadership and governance</h1>
@@ -174,6 +189,73 @@ blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;f
     },
     body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
   }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
 })();
 </script>
 
