@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Series A Intro checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to read the Series A Intro checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>5 min read</span>
+</div>
+
+<p class="article-lead">At Series A, the intro slide has to do something the Pre-Seed and Seed versions never had to: justify a bigger bet. It's no longer enough to describe the company accurately, the opening line needs to earn the size of ambition it's about to ask investors to fund.</p>
+
+<p>The Series A intro checklist has four lines. Three of them push the founder toward a bigger claim than they're probably comfortable making out loud, and the fourth checks whether that claim actually survives being said in front of someone else. Here's what each line is really testing.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Opens with market ambition: size of opportunity and leadership position</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks whether the founder can name the prize they're chasing, not just the traction they already have. A Series A investor is underwriting a much larger check against a much longer time horizon, and they need to hear, in the first sentence, why this company is playing for the whole category rather than a comfortable niche.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Restating the Seed-stage growth number (MoM growth, MRR) as if that alone constitutes ambition, without naming the size of the market or the leadership position being pursued.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Northloop is building the dispatch operating system for the $4.2B regional freight brokerage market, and today we route 8% of loads in the Midwest corridor we operate in."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Sentence reads like an operating company, not an early bet</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks the tone, not just the content. Language that hedges with "could," "has the potential to," or "we're hoping to" belongs in an earlier round; by Series A, the sentence should describe a business that already runs, with real customers and real revenue, stated as fact.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Keeping the hedging phrasing from earlier decks intact ("Northloop could become the dispatch layer for regional freight") when the company already has paying customers who prove the claim.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Northloop runs dispatch for 340 regional carriers processing $60M in freight volume monthly." No "could," no hedge, just what's true.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">States what has changed since the last round to justify this ambition</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks for a causal story, not just a progress update. Investors need to understand what specifically happened between the Seed round and now that makes a bigger, bolder bet suddenly justified; generic progress ("grew the team," "improved the product") doesn't answer that question.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Listing accomplishments (hired a VP of Sales, shipped a redesign) without connecting any of them to why the ambition stated in line one is now credible rather than aspirational.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Since our Seed round, we signed our first regional trucking network, 40 carriers, as a channel partner, cutting our customer acquisition cost from $4,200 to $380 per carrier."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Reviewed out loud with a mentor or peer</div>
+  </div>
+  <div class="force-body">
+    <p>A market-leadership claim that sounds fine written down can sound inflated the moment it's spoken to someone skeptical. This line checks that the ambition has been pressure-tested against a real listener, ideally someone who has seen enough pitches to notice when a claim is overreaching.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Only rehearsing the line with people who already believe in the company (co-founders, early employees), never with someone likely to push back on the scale of the claim.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Practiced the market framing with two Series A investors who'd passed on other deals; refined the opening sentence after both said the ambition felt earned, not inflated."</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"We grew 19% month over month last quarter." (a Seed-stage metric standing in for market ambition)</li>
+      <li>"Northloop could become the dispatch layer for regional freight." (hedged, reads like a bet, not a business)</li>
+      <li>"We hired a VP of Sales and shipped a redesign." (progress with no causal link to the bigger ambition)</li>
+      <li>Line only ever rehearsed with people already inside the company.</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"Building the dispatch operating system for the $4.2B regional freight brokerage market."</li>
+      <li>"Northloop runs dispatch for 340 regional carriers processing $60M in freight volume monthly."</li>
+      <li>"Signed a 40-carrier channel partner, cutting CAC from $4,200 to $380 per carrier."</li>
+      <li>Pressure-tested the line with investors who'd passed on other deals, and revised it.</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four: ambition has to be earned, not asserted. Every claim about market size or leadership position needs a concrete, causal fact from the last twelve months sitting directly underneath it, or it reads as inflated rather than confident.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For every ambitious claim in your opening line, ask: what specific thing happened in the last year that makes this true now and wasn't true at Seed? If you can't name it in one sentence, the ambition is outrunning the evidence, and an experienced investor will notice before you finish the slide.</p>
+</div>
+
+<p>For the underlying structure a strong opening line needs, see <a href="https://medium.com/the-mission/the-greatest-sales-deck-ive-ever-seen-4f4ef3391ba0">"The Greatest Sales Deck Ever Made"</a> by Andy Raskin, or work through the <a href="https://www.strategyzer.com/library/the-value-proposition-canvas">Value Proposition Canvas</a> to confirm your positioning still maps to a real customer problem at this scale.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Open with the size of the market and the leadership position you're pursuing, not just recent traction.</li>
+    <li>Cut hedging language ("could," "has the potential to"). State what the company already does as fact.</li>
+    <li>Name the specific thing that changed since your last round that makes the bigger ambition credible now.</li>
+    <li>Rehearse the line with skeptical outsiders, not just people already inside the company.</li>
+    <li>Every ambitious claim needs a concrete, causal fact underneath it or it reads as inflated.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_42_intro_checklist_guide_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>

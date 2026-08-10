@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Seed Market checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to read the Seed Market checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>5 min read</span>
+</div>
+
+<p class="article-lead">At Seed, the market slide stops being a story you tell and starts being a story your own data has to back up. Reviewers already assume you can describe a market, what they're checking now is whether your cohorts agree with you.</p>
+
+<p>The Seed Market checklist has four lines. Each one is testing whether your live product and customer base now support the claims you were allowed to make on faith at Pre-Seed. This guide walks through all four: what each line is really verifying, the common way founders half-satisfy it, and what a genuinely complete answer looks like.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Market size backed by your own cohort data (retention, expansion), not just research</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether your market size claim is still coming from a report, or whether it's now being confirmed by how your actual customers behave. Retention and expansion data are the tell: if your ICP sticks around and grows their spend, that's evidence the market you described is real and durable, not just plausible on paper.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Reusing the same bottom-up TAM slide from the Pre-Seed deck unchanged, with no reference to actual month 6 or month 12 retention curves from paying customers.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Our 340 paying clinics show 89% net revenue retention at month 12, with 22% expanding to a second location license, which is the behavior our $210M SAM assumes at scale."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Competitors named with clear differentiation stated</div>
+  </div>
+  <div class="force-body">
+    <p>This line has moved past awareness (naming competitors exists) into positioning (explaining why customers pick you over them, in their own words if possible). At Seed, reviewers expect you to have lost some deals and won some deals against named alternatives, and to know exactly why each happened.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>A generic feature comparison table with checkmarks, but no explanation, grounded in actual deals won or lost, of why a customer chose you over the named competitor.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"We beat Curalink in 14 of 19 competitive deals this year; clinics cite our 48-hour onboarding versus their 6-week implementation as the deciding factor in exit interviews."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Plan to scale within this market outlined</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether you have a concrete, sequenced path to go from your current customer count to a much larger share of the same market, using channels you've already tested rather than ones you hope will work. It's a go-to-market plan, not a wish list of future tactics.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>A slide that lists "paid ads, partnerships, and expansion into new verticals" as three equal, untested bullet points with no sequencing or evidence any of them convert.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Referral from existing clinics currently drives 60% of new signups at a $340 CAC; we're doubling the referral incentive and hiring one partnerships lead to convert our top 3 regional dental associations next."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Traction evidence linked to the market claim</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking that your growth numbers and your market size aren't two disconnected slides. If you claim a $200M SAM, your traction should be a visible, plausible early foothold inside that number, not a set of metrics that could belong to a company in a completely different market.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Presenting revenue growth on one slide and market size on another with no shared unit connecting them, so a reviewer can't tell what percentage of the claimed market the traction actually represents.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"340 of the estimated 28,000 independent dental clinics in our target states are now paying customers, 1.2% penetration, growing 15% month over month within that same 28,000 clinic universe."</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>Same TAM slide as Pre-Seed, no retention or expansion data cited</li>
+      <li>Feature checkmark table with no win/loss reasoning attached</li>
+      <li>"Paid ads, partnerships, new verticals" listed with no sequencing</li>
+      <li>Growth metrics and market size shown on separate, disconnected slides</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"89% NRR and 22% expansion at month 12 across 340 clinics" (cohort-backed)</li>
+      <li>"Beat Curalink in 14 of 19 deals, cited 48hr onboarding" (deal-grounded)</li>
+      <li>"Referral drives 60% of signups at $340 CAC, doubling incentive next" (tested, sequenced)</li>
+      <li>"340 of 28,000 target clinics = 1.2% penetration, growing 15% MoM" (same unit, linked)</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four: at Seed, a market claim only counts if your own customer data is the one making it, not a market report or a slide inherited from an earlier deck.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For each of the four lines, ask: could I replace this claim with a number pulled straight from my own CRM or product analytics, right now? If the answer is yes for all four, the market slide is earning its place at Seed. If any line still leans on outside research alone, it hasn't caught up to where the company actually is.</p>
+</div>
+
+<p>For the mechanics of building this into your own numbers, see <a href="https://sheblooms-articles.vercel.app/article_14_cohort_backed_market_sizing_seed.html">How to back your market size with your own cohort data</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Market_Seed_CohortBackedSizingWorksheet.html">Cohort-Backed Market Sizing Worksheet</a> directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>At Seed, market size claims need to be confirmed by retention and expansion data, not just research.</li>
+    <li>Competitor differentiation should be grounded in actual won and lost deals, not a feature checklist.</li>
+    <li>A scale plan should sequence channels you've already tested, not list untested tactics as equals.</li>
+    <li>Traction and market size need a shared unit so a reviewer can see the actual penetration percentage.</li>
+    <li>Every claim on this slide should be replaceable with a live number from your own CRM or analytics.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_47_market_checklist_guide_seed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Series A Solution checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to read the Series A Solution checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>5 min read</span>
+</div>
+
+<p class="article-lead">At Series A, the solution slide stops being about whether the product works and starts being about whether it keeps working as the company gets much bigger. That shift changes what every line on this checklist is actually testing.</p>
+
+<p>The Series A solution checklist has four lines. Each one asks the founder to project the current product forward: does the fit hold at scale, does the moat hold at scale, does the roadmap protect the moat, does the experience hold under real load. Here's what each line is really checking.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Product-market fit demonstrated with evidence, not asserted</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks for behavioral proof, not sentiment. Customer quotes and NPS scores measure how people feel about the product; retention, expansion, and organic pull measure what people actually do with it, and only the second kind of evidence tells an investor whether fit is real.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Citing a strong NPS score or a handful of glowing customer quotes as proof of fit, without showing whether usage is actually growing, expanding, or sticking over time.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"92% net dollar retention across 140 port customers over the last 12 months, plus 30% of new customers arrived through inbound referral with no sales outreach."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Defensibility at scale explained: what stays hard to copy as you grow</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks whether the moat is durable, not just present today. Something that's defensible at ten customers can evaporate at two hundred once a well-funded competitor shows up, so the founder needs to explain the specific mechanism that gets stronger, not weaker, as the company scales.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Pointing to "first mover advantage" or "strong customer relationships" as the moat, neither of which actually becomes harder to replicate as competitors enter with more capital and time.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Every port on Harborline contributes berth-scheduling data that trains our congestion-prediction model. At 140 ports, our forecast accuracy is 34% better than a new entrant's would be on day one, and that gap widens with each port added."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Roadmap shown for sustaining the advantage, not just adding features</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks whether the roadmap actively widens the moat described in the line above, rather than just growing the surface area of the product. A roadmap full of customer-requested features can be a healthy sign of listening to users, but it doesn't, by itself, defend the advantage that got the company here.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Presenting a roadmap made up entirely of customer-requested features (custom reports, more integrations) with nothing tied to strengthening the actual defensibility mechanism.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Next 12 months: expand data partnerships with three regional customs agencies to enrich the prediction model, which compounds the data moat, alongside standard feature requests like custom reporting."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">User experience proven to hold up under scale</div>
+  </div>
+  <div class="force-body">
+    <p>This line checks whether the product experience that worked for early adopters, who tend to tolerate rough edges, still works when usage volume, account complexity, or user count grows by ten times. Scale often breaks things that felt perfectly fine at small numbers, and investors want to see that tested, not assumed.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Demoing the product using a single small customer's data, which loads fast and looks clean, without showing performance at the size of the company's largest current account.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Load-tested the scheduling dashboard with our largest port's actual volume, 2,200 vessel calls a month. Page load stayed under 1.2 seconds, and support tickets per active user actually dropped 18% quarter over quarter as we scaled from 40 to 140 ports."</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"Our NPS score is 62." (sentiment, not behavior; doesn't show growth or stickiness)</li>
+      <li>"We have first mover advantage." (doesn't get harder to copy as competitors enter with capital)</li>
+      <li>Roadmap made entirely of customer-requested features with no link to the moat.</li>
+      <li>Product demoed only with one small, clean customer account.</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"92% net dollar retention across 140 customers; 30% of new customers arrive via inbound referral."</li>
+      <li>"Every port contributes data that improves our prediction model; the gap widens with scale."</li>
+      <li>"Data partnerships that compound the moat, alongside standard feature requests."</li>
+      <li>"Load-tested at our largest customer's real volume; load times and support load both held."</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four: every claim needs to answer "and does that still hold at 10x the size?" Fit, defensibility, roadmap, and UX all get re-tested at Series A against a much larger hypothetical company than the one that exists today.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For each claim on your solution slide, ask: is this true because of something structural that grows with scale, or is it true today because the company is still small enough that problems haven't shown up yet? If it's the second, say so and show the plan to fix it before an investor finds the gap first.</p>
+</div>
+
+<p>For more on proving fit and defensibility together, see <a href="https://sheblooms-articles.vercel.app/article_11_pmf_defensibility_seriesa.html">How to prove product-market fit and defensibility at scale</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Solution_SeriesA_PMFScaleWorksheet.html">PMF & Scale Defensibility Worksheet</a> directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Prove product-market fit with behavioral evidence (retention, expansion, organic pull), not sentiment scores.</li>
+    <li>Explain the specific mechanism that makes your moat harder to copy as you grow, not just today.</li>
+    <li>Your roadmap should visibly strengthen that moat, not just add features customers happen to ask for.</li>
+    <li>Test and show that the user experience holds up at your largest customer's actual volume, not a clean demo account.</li>
+    <li>Every Series A solution claim should hold up when scaled 10x, not just at current size.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_45_solution_checklist_guide_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Series A Market checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to read the Series A Market checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>5 min read</span>
+</div>
+
+<p class="article-lead">At Series A, the market slide stops asking "is there a market" and starts asking "how big does this actually get, and do you understand the shape of the fight you're in to get there."</p>
+
+<p>The Series A Market checklist has four lines. Each one is testing whether you can frame growth as an expansion thesis with a credible path, rather than a bigger version of the same Seed-stage story. This guide walks through all four: what each line is really verifying, the common way founders half-satisfy it, and what a genuinely complete answer looks like.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">Framed as an expansion thesis: new geographies, segments, or cross-sell</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether your future growth has a named shape, not just a bigger number. An expansion thesis states specifically which lever, geography, adjacent segment, or cross-sell into the existing base, does the next multiple of growth, and why that lever is the right one given what you've already proven works.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Restating the original market size with a bigger multiplier ("we think this could be a $2B opportunity") without naming which specific expansion lever gets the company there.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Our next 10x comes from cross-selling payroll into our existing 1,100 scheduling customers, where 40% already ask about it in support tickets, before we touch a new geography."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Path from current position to the claimed market size shown</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking for a bridge, not just two endpoints. Reviewers want to see the intermediate steps and milestones that connect where you are today to the market size you're claiming, with rough timing and the assumptions that would have to hold at each step.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Showing current ARR on one slide and a $2B TAM on another with a dotted arrow between them and no stated milestones, segments, or years connecting the two.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"$8M ARR today in scheduling for salons; payroll cross-sell adds $14M ARR by year 2 at 25% attach rate; UK expansion adds $9M by year 3, reaching $31M against a $260M serviceable segment."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Winner-takes-most or fragmentation dynamics addressed</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether you understand the actual competitive structure of your market, because the growth strategy that works in a consolidating, winner-takes-most market is different from the one that works in a permanently fragmented one. Reviewers want to know which dynamic applies and why, since it changes how much of the TAM is realistically capturable by anyone.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Ignoring the question entirely and assuming a large, evenly shared market with no discussion of switching costs, network effects, or why the space stays fragmented or consolidates.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Salon software is winner-takes-most within a region due to staff scheduling network effects across chains; we already hold 34% share in our three densest metros, which we treat as proof of the dynamic, not an exception to it."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Competitors and differentiation stated at scale</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether your competitive position holds up against who you'll actually be fighting at scale, larger, better-funded incumbents and category leaders, not just the early-stage competitors you beat to get here. Differentiation needs to be durable at a bigger size, not dependent on being small and fast.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Naming the same small, early-stage competitors from the Seed deck without addressing how you compete against the category incumbent once you're both operating at real scale.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Against Squire (the incumbent at 40% share), our payroll+scheduling bundle creates a 30% lower total cost of ownership that holds even as we scale past 5,000 locations, since it's structural, not a promotional discount."</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"Could be a $2B opportunity" (bigger number, no named lever)</li>
+      <li>Current ARR and TAM shown with a dotted arrow, no milestones between</li>
+      <li>Large, evenly shared market assumed, no fragmentation dynamic addressed</li>
+      <li>Same early competitors from the Seed deck, no incumbent named</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"Cross-sell payroll into 1,100 existing customers, 40% already asking" (named lever)</li>
+      <li>"$8M today, $14M via cross-sell, $9M via UK, $31M by year 3" (bridged, staged)</li>
+      <li>"Winner-takes-most via scheduling network effects, 34% share in 3 metros" (dynamic named)</li>
+      <li>"30% lower TCO than Squire, holds structurally past 5,000 locations" (durable at scale)</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four: at Series A, the market slide is judged on whether growth has a named mechanism and a competitive structure attached, not on the size of the number alone.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For each of the four lines, ask: if I removed the dollar figure entirely, would the mechanism still make sense on its own? A named expansion lever, a staged bridge, a stated market dynamic, and a durable differentiator should all stand up without the number attached. If the number is doing all the persuading, the thesis underneath it isn't finished yet.</p>
+</div>
+
+<p>For the mechanics of building this into your own deck, see <a href="https://sheblooms-articles.vercel.app/article_15_market_expansion_thesis_seriesa.html">How to frame your market as an expansion thesis</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Market_SeriesA_ExpansionThesisCanvas.html">Market Expansion Thesis Canvas</a> directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>An expansion thesis needs a named lever, geography, segment, or cross-sell, not just a bigger number.</li>
+    <li>The path to your claimed market size needs staged milestones bridging today to the future, not two disconnected slides.</li>
+    <li>State whether your market is winner-takes-most or fragmented, and why, since it changes what's realistically capturable.</li>
+    <li>Differentiation at Series A needs to hold up against category incumbents at scale, not just early competitors.</li>
+    <li>Every mechanism on this slide should make sense even with the dollar figure removed.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_48_market_checklist_guide_seriesa';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>

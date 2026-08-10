@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to read the Pre-Seed Traction checklist: what each line is actually asking · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font-size:12px;color:var(--muted);margin-top:8px;font-style:normal}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.force-block{margin-bottom:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.force-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--border);background:var(--soft)}
+.force-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--brand);line-height:1;flex-shrink:0}
+.force-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;padding-top:4px}
+.force-body{padding:16px 20px}
+.force-body p{margin-bottom:12px;font-size:15px}
+.force-body p:last-child{margin-bottom:0}
+.force-example{background:#f0fdf4;border-radius:7px;padding:10px 14px;font-size:13px;color:#14532d;margin-top:8px;border:1px solid #bbf7d0}
+.force-example-label{font-weight:600;margin-bottom:3px}
+.force-miss{background:#fef2f2;border-radius:7px;padding:10px 14px;font-size:13px;color:#7f1d1d;margin-top:8px;border:1px solid #fecaca}
+.force-miss-label{font-weight:600;margin-bottom:3px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to read the Pre-Seed Traction checklist: what each line is actually asking</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>5 min read</span>
+</div>
+
+<p class="article-lead">At Pre-Seed, "traction" doesn't mean big numbers. It means proof that something real is happening between you and a customer, and that it's pointed in the right direction.</p>
+
+<p>The Pre-Seed traction checklist has four lines. None of them require impressive scale, which is exactly the trap: founders read "small is fine" as "vague is fine" and skip the specifics that actually make small numbers credible. This guide unpacks all four: what the line is really verifying, the common way founders half-satisfy it, and what a genuinely complete answer looks like.</p>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">1</div>
+    <div class="force-title">First paying customers and initial MRR stated, even if small</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking whether real money has changed hands, not whether people are interested. Interest is cheap: sign-ups, waitlist adds, and "I'd definitely use this" all cost the customer nothing. A number attached to actual payment is the first evidence that the problem is worth paying to solve, and stating it as MRR (not a lump one-time figure) shows you understand the difference between a sale and a subscription.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Reporting "40 sign-ups" or "120 people on the waitlist" as if it were traction, or citing total revenue to date without saying how much of it is recurring versus a single invoice.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>"Ledgerly has 11 paying customers at $19/month, for $209 in MRR as of July 2026, all on recurring subscriptions, not one-time invoices," says founder Priya Nathan.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">2</div>
+    <div class="force-title">Qualitative feedback from early adopters included</div>
+  </div>
+  <div class="force-body">
+    <p>This line is verifying that the payment isn't a fluke, that customers can explain in their own words what changed for them. Investors read qualitative feedback as a second, independent signal on top of the MRR number: it tells them whether people are paying because the product actually solved something, or because a friend asked them to try it.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Summarizing feedback as "customers love it" or "great response so far" with no direct quote, no name, and no description of what specifically changed in their behavior.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>Priya interviewed her first 8 customers after 30 days; 6 said they'd stopped using spreadsheets entirely. Electrician Dave Okoro told her: "I used to spend Sunday nights doing invoices. Now it's done before I leave the job site."</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">3</div>
+    <div class="force-title">Trend direction shown (up, even if numbers are small)</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking for a slope, not a size. A single number, however it's framed, tells an investor nothing about momentum: it could be the peak, the trough, or a one-off. Three or four data points across consecutive months turn a static fact into evidence of direction, which is what Pre-Seed investors are actually pricing.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Showing one current MRR figure on the slide with no history, so a reader can't tell whether it's climbing, flat, or already declining.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>Ledgerly's MRR chart: $0 in April, $57 in May, $114 in June, $209 in July, four straight months of growth even though the base is still tiny.</div>
+  </div>
+</div>
+
+<div class="force-block">
+  <div class="force-header">
+    <div class="force-num">4</div>
+    <div class="force-title">Testimonials, press, or case studies added if available</div>
+  </div>
+  <div class="force-body">
+    <p>This line is checking for external validation, proof that someone other than the founder is willing to vouch for the product in public. "If available" means it isn't a hard gate at Pre-Seed, but it's also not an excuse to skip a testimonial that already exists and simply hasn't been written down.</p>
+    <div class="force-miss"><div class="force-miss-label">Common miss:</div>Leaving the slide blank when a happy customer would gladly give a quote, or padding it with a vague LinkedIn comment instead of a named testimonial tied to a specific outcome.</div>
+    <div class="force-example"><div class="force-example-label">What "done" looks like:</div>A one-paragraph case study slide: "How Dave Okoro Electric cut invoicing time from 3 hours a week to 20 minutes," with his name, his business, and a link to the 4.8-star review he left.</div>
+  </div>
+</div>
+
+<h2>Checked the box vs. actually done</h2>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as checked, isn't done</div>
+    <ul>
+      <li>"120 people on our waitlist" (interest, not payment)</li>
+      <li>"Customers love the product" (no name, no quote, no specifics)</li>
+      <li>"$209 in MRR" shown with no history (no way to tell direction)</li>
+      <li>Testimonials section left blank despite happy paying customers</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Actually done</div>
+    <ul>
+      <li>"11 paying customers, $209 MRR, all recurring subscriptions"</li>
+      <li>"6 of 8 customers said they stopped using spreadsheets entirely, per Dave Okoro"</li>
+      <li>"$0 to $209 MRR over 4 months: April, May, June, July"</li>
+      <li>Named case study with outcome, business, and a public review link</li>
+    </ul>
+  </div>
+</div>
+
+<p>The pattern across all four: a small number told precisely beats a vague claim told confidently. A named customer, a dated chart, and a direct quote each do more to convince an investor than any amount of enthusiasm on the slide.</p>
+
+<div class="callout">
+  <div class="callout-title">A useful test</div>
+  <p>For each of the four lines, ask: is this a fact I can point to, or a feeling I'm describing? Money, quotes, dates, and names are facts. "Strong interest," "great feedback," and "growing fast" are feelings dressed up as facts, and Pre-Seed investors have seen that costume before.</p>
+</div>
+
+<p>For a deeper walkthrough of presenting traction when the numbers are still small, see <a href="https://sheblooms-articles.vercel.app/article_19_first_traction_signal_preseed.html">How to present traction when the numbers are still small</a>, or work through the <a href="https://sheblooms-templates.vercel.app/SB_Traction_PreSeed_FirstSnapshotBuilder.html">First Traction Snapshot Builder</a> directly.</p>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>State MRR precisely, and separate recurring revenue from one-time payments.</li>
+    <li>Attach a name and a direct quote to every claim of customer feedback.</li>
+    <li>Show at least three data points over time so direction is visible, not just size.</li>
+    <li>Add a testimonial, press mention, or case study whenever one genuinely exists.</li>
+    <li>Specificity, not scale, is what makes small early traction numbers credible.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_52_traction_checklist_guide_preseed';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.force-title,.box-title,.result-title,.callout-title,.key-points-title,.example-label,.force-example-label,.force-miss-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/\s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>
