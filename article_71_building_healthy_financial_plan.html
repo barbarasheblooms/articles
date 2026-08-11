@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to build a financial plan investors will actually trust · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.numbered-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:5px}
+.step-text{font-size:15px;color:#333;line-height:1.65}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  .numbered-step{flex-direction:column;gap:8px}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to build a financial plan investors will actually trust</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>9 min read</span>
+</div>
+
+<p class="article-lead">A financial plan isn't a prediction of the future. It's evidence that you understand your own business well enough to make one. Investors read it that way, so you should build it that way too.</p>
+
+<p>Most first-time financial plans fail for the same reason: they're built backwards. The founder decides how much they want to raise, works out what monthly revenue would make the story look good, and then builds a spreadsheet that arrives at that number. Investors who've seen hundreds of these can spot a plan built this way almost immediately, usually because the growth curve is a smooth, suspiciously convenient line with no visible reasoning behind it.</p>
+
+<p>A financial plan that holds up is built the other way around: from your real assumptions, forward, to whatever number they honestly produce. If that number isn't as exciting as you'd like, the plan hasn't failed, it's told you something true that you now need to address, either in the business or in the story.</p>
+
+<h2>Start from a revenue model, not a revenue number</h2>
+
+<p>Before you touch a spreadsheet, you need a sentence that explains how money actually enters your business. Not "we'll get to €1M ARR by year two," but the mechanism underneath it: how many customers, paying how much, acquired through which channel, at what rate.</p>
+
+<div class="numbered-step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">Name your unit</div>
+    <div class="step-text">Decide what one "unit" of your business is: a customer, a seat, a transaction, a location. Every revenue projection should be built up from this unit, not down from a target.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">Base your growth rate on evidence you already have</div>
+    <div class="step-text">If you have any live data, however small, your actual month-over-month growth rate, your actual conversion rate, your actual churn, use it as the starting point. Extrapolating from your own trailing three months is defensible. Inventing a rate because it produces a nice-looking curve is not.</div>
+  </div>
+</div>
+
+<div class="numbered-step">
+  <div class="step-num">3</div>
+  <div class="step-body">
+    <div class="step-title">Separate the channels that scale from the ones that don't</div>
+    <div class="step-text">A revenue model that depends entirely on the founder personally closing every deal doesn't scale, and a sophisticated investor will notice the moment your headcount plan doesn't match your revenue plan. Be explicit about which channel is expected to carry growth as you scale, and what has to be true for it to work.</div>
+  </div>
+</div>
+
+<h2>Build your cost structure in a few honest buckets, not fifty optimistic line items</h2>
+
+<p>The opposite failure mode from an inflated revenue number is a cost structure that's too granular to be credible. A 40-row expense breakdown with a line for "office snacks" doesn't read as thorough, it reads as a founder who hasn't yet identified what actually drives their costs.</p>
+
+<p>Group your costs into a small number of buckets that map to real decisions: team (by far the largest cost for most early-stage companies), product and infrastructure, marketing and sales, and general operating costs. Within each bucket, the goal isn't precision to the euro, it's a defensible logic for how the bucket grows as the business grows. Team costs should scale with your hiring plan. Marketing costs should scale with your customer acquisition targets. If a bucket doesn't move when the business grows, question why it's there.</p>
+
+<h2>Stress-test the plan before an investor does it for you</h2>
+
+<p>Every financial plan rests on a small number of assumptions that, if wrong, change everything downstream. Usually it's your customer acquisition cost, your churn rate, or your sales cycle length. The single most credibility-building thing you can do with a financial plan is find your riskiest assumption and show what happens if it's twice as bad as you expect.</p>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">Reads as unreliable</div>
+    <ul>
+      <li>One single scenario, presented as the plan</li>
+      <li>A growth curve with no visible mechanism behind it</li>
+      <li>No acknowledgment of what could go wrong</li>
+      <li>Costs itemized to the euro with no scaling logic</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">Reads as credible</div>
+    <ul>
+      <li>A base case, plus at least one downside scenario</li>
+      <li>Growth built up from a stated unit and rate, not asserted</li>
+      <li>The riskiest assumption named and stress-tested explicitly</li>
+      <li>Costs grouped into buckets with clear scaling logic</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">What a stress-tested assumption sounds like out loud</div>
+  <div class="example-text">"Our plan assumes a €90 CAC based on our last three months of paid acquisition. If CAC comes in at €180 instead, our runway drops from 14 to 10 months, which is still enough to reach our next milestone, but it changes how much of this raise we'd allocate to paid channels versus organic and referral."</div>
+</div>
+
+<h2>Set a cadence for updating it, and actually keep it</h2>
+
+<p>A financial plan built once for a fundraise and never touched again stops being useful the month after you raise. The plans that hold up over time are updated on a fixed cadence, monthly at the earliest stages, quarterly once the business has more history, comparing actuals against what the plan predicted and adjusting the forward-looking numbers accordingly.</p>
+
+<p>This matters for a reason beyond internal discipline: investors who lead your next round will ask how your actuals tracked against the plan you raised on. Founders who can answer that question with a real comparison, including the misses, are read as far more trustworthy than founders who present a brand-new set of numbers each time with no reference to what they said before.</p>
+
+<h2>Connect the plan directly to your ask</h2>
+
+<p>The financial plan and the fundraising ask are not two separate documents, they're the same argument told twice. Your runway, your burn, and your growth assumptions should lead an investor, without you having to explain it, to exactly the number you're raising and exactly what it's for. If the plan and the ask don't visibly connect, it looks like the ask was decided first and the plan was reverse-engineered to justify it, which is often exactly what happened.</p>
+
+<div class="callout">
+  <div class="callout-title">What a healthy financial plan needs, at any stage</div>
+  <p>A revenue model built from a defined unit and an evidenced rate, not an asserted target. Costs grouped into a small number of buckets with clear scaling logic. At least one stress-tested assumption, showing the downside case and what you'd do about it. A fixed cadence for revisiting the plan against actuals. A raise amount and use of funds that visibly follow from the numbers above, rather than the other way around.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Build revenue up from a defined unit and an evidenced rate, not down from a target number.</li>
+    <li>Group costs into a small number of buckets with a clear scaling logic, not dozens of overly precise line items.</li>
+    <li>Stress-test your riskiest single assumption and show the resulting downside case, not just the base case.</li>
+    <li>Revisit the plan against actuals on a fixed cadence; investors will ask how reality tracked against what you said.</li>
+    <li>Your raise amount and use of funds should visibly follow from the plan, not the reverse.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_71_building_healthy_financial_plan';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.step-title,.step-text,.box-title,.callout-title,.key-points-title,.example-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>
