@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to calculate your startup's valuation (and defend the number) · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.method-card{border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:18px}
+.method-top{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.method-name{font-family:'DM Serif Display',serif;font-size:19px;color:var(--ink)}
+.method-fit{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);background:#eef0ff;padding:3px 9px;border-radius:20px}
+.method-text{font-size:14.5px;color:#1a1a18;line-height:1.65}
+.formula-box{background:var(--ink);color:#fff;border-radius:10px;padding:14px 18px;margin:14px 0;font-family:'DM Serif Display',serif;font-size:14px;line-height:1.6}
+.formula-box .fvar{color:#a5b4ff}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.box{border-radius:10px;padding:18px 20px;border:1px solid}
+.box.red{background:#fef2f2;border-color:#fecaca}
+.box.green{background:#f0fdf4;border-color:#bbf7d0}
+.box-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.box.red .box-title{color:#991b1b}
+.box.green .box-title{color:#166534}
+.box li{font-size:13px;margin-bottom:6px}
+.box.red li{color:#7f1d1d}
+.box.green li{color:#14532d}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .two-col{grid-template-columns:1fr}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">How to calculate your startup's valuation (and defend the number)</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>9 min read</span>
+</div>
+
+<p class="article-lead">There is no formula that produces the one correct valuation for your startup. What there is, is a small set of methods investors actually use to arrive at a number, and knowing them is what lets you negotiate instead of just accepting whatever figure lands on the table.</p>
+
+<p>This is genuinely one of the most misunderstood parts of fundraising. Founders often treat valuation as something an investor calculates and hands to them, or as something that should simply reflect "what the company is worth." Neither is quite right. Valuation is a negotiated number, anchored by a handful of methods that vary depending on how much evidence your company can offer, and it matters less as an abstract measure of worth than as one input into a very concrete calculation: how much of your company you give up for how much cash.</p>
+
+<div class="callout"><p><strong>A note before you start:</strong> this article explains how valuation is typically approached so you can understand and negotiate it. It isn't legal or financial advice, and your specific cap table, share class structure, and jurisdiction all affect the real mechanics. Work through those specifics with a lawyer or financial advisor before finalizing any round.</p></div>
+
+<h2>Pre-money and post-money: the two numbers everything else depends on</h2>
+
+<p>Before any method, get this distinction fixed in your head, because it's the single most common source of confusion in a term sheet negotiation.</p>
+
+<div class="formula-box">Post-money valuation = <span class="fvar">Pre-money valuation</span> + <span class="fvar">New investment</span></div>
+
+<p><strong>Pre-money valuation</strong> is what the company is deemed worth right before the new investment lands. <strong>Post-money valuation</strong> is what it's worth immediately after, including that new cash. The percentage of the company an investor receives is calculated against the post-money number, not the pre-money one, which is why a seemingly small difference in which number is being discussed can change what an investor actually owns by several percentage points.</p>
+
+<div class="example-box">
+  <div class="example-label">Why the distinction changes the outcome</div>
+  <div class="example-text">A &euro;1M investment at a &euro;4M pre-money valuation gives the investor 20% of the company (&euro;1M &divide; &euro;5M post-money). The same &euro;1M investment described loosely as "at a &euro;4M valuation" with no pre/post distinction could easily be misread as &euro;4M post-money, giving the investor 25% instead. On a cap table, that's the difference between founders keeping 80% or 75% of the company for the identical check size.</div>
+</div>
+
+<h2>Methods that work when you have little or no revenue</h2>
+
+<p>Traditional valuation methods like discounted cash flow analysis need years of predictable cash flow to work with, which is exactly what an early-stage startup doesn't have. Investors use different tools at this stage, ones built for uncertainty rather than around it.</p>
+
+<div class="method-card">
+  <div class="method-top"><div class="method-name">The Berkus Method</div><div class="method-fit">Pre-revenue</div></div>
+  <div class="method-text">Assigns a dollar value, typically up to roughly $500K each, to five qualitative risk factors: a sound idea, the quality of the prototype, the strength of the management team, strategic relationships already in place, and evidence of product rollout or early sales. Add the five together and you have a valuation ceiling, usually landing in the low single-digit millions.</div>
+</div>
+
+<div class="method-card">
+  <div class="method-top"><div class="method-name">The Scorecard Method</div><div class="method-fit">Pre-seed / early seed</div></div>
+  <div class="method-text">Starts from the average pre-money valuation for similar companies in your region and sector, then adjusts it up or down based on how your team, market size, product, competitive landscape, and need for additional funding compare to that average. It's explicitly relative: you're not calculating worth from scratch, you're benchmarking against comparable deals that already happened.</div>
+</div>
+
+<h2>Methods that work once you have real revenue</h2>
+
+<div class="method-card">
+  <div class="method-top"><div class="method-name">Revenue multiples (comparables)</div><div class="method-fit">Seed / Series A</div></div>
+  <div class="method-text">Once you have real, recurring revenue, valuation is commonly expressed as a multiple of ARR, benchmarked against recent deals for similar companies in your sector, geography, and growth rate. A SaaS company growing quickly with strong retention will command a materially higher multiple than one with the same revenue growing slowly with high churn, so the multiple itself is really standing in for growth quality and durability, not revenue alone.</div>
+</div>
+
+<div class="method-card">
+  <div class="method-top"><div class="method-name">The VC Method</div><div class="method-fit">Series A and later</div></div>
+  <div class="method-text">Works backwards from a target exit. The investor estimates what your company could realistically sell for or IPO at in five to eight years, applies the return multiple their fund needs to hit, and derives the valuation today that makes the math work for them. It's a useful method to understand even if you never run the numbers yourself, because it explains why investors sometimes reject a "fair" valuation, it simply doesn't leave room for the return their fund model requires.</div>
+</div>
+
+<div class="two-col">
+  <div class="box red">
+    <div class="box-title">A valuation number that won't hold up</div>
+    <ul>
+      <li>Picked because it "sounds right" or matches a headline you read</li>
+      <li>No comparable deals or benchmarks referenced at all</li>
+      <li>Pre-money and post-money used interchangeably in conversation</li>
+      <li>No connection shown between the number and your raise or dilution</li>
+    </ul>
+  </div>
+  <div class="box green">
+    <div class="box-title">A valuation number you can defend</div>
+    <ul>
+      <li>Anchored to a named method appropriate to your stage</li>
+      <li>Benchmarked against a small set of comparable, recent deals</li>
+      <li>Pre-money and post-money stated explicitly and separately</li>
+      <li>Directly tied to how much of the company you're giving up for the raise</li>
+    </ul>
+  </div>
+</div>
+
+<h2>How valuation connects back to your cap table</h2>
+
+<p>The number that ultimately matters most to you as a founder isn't the valuation in isolation, it's the dilution it produces: how much of the company you own after the round closes. A higher valuation with a larger raise can dilute you more than a lower valuation with a smaller, tightly-scoped raise. Before agreeing to any number, run it forward: post-money valuation, the percentage the new investment represents, and what that leaves current shareholders holding, including the effect of any option pool being created or topped up at the same time, since pool top-ups are usually taken out of founder and existing-investor equity, not out of the new investor's check.</p>
+
+<p>If you're raising on a SAFE or convertible note rather than a priced round, the relevant number at this stage is usually the valuation cap, the ceiling at which your note converts into equity at the next priced round, not a final valuation today. The cap functions as a placeholder valuation that protects early investors from being diluted unfairly if the company's value rises sharply before it converts.</p>
+
+<div class="callout">
+  <div class="callout-title">What to have ready before a valuation conversation</div>
+  <p>The method most appropriate to your stage, applied honestly. Two or three comparable recent deals you can point to. A clear statement of pre-money versus post-money for whatever number is on the table. A cap table projection showing what the round leaves you and your team holding, including any option pool effect.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>Post-money valuation equals pre-money valuation plus the new investment; ownership percentages are calculated against post-money, not pre-money.</li>
+    <li>Pre-revenue rounds typically use the Berkus or Scorecard methods, both built around qualitative risk factors and comparable deals, not cash-flow projections.</li>
+    <li>Once you have real revenue, valuation is usually expressed as a multiple of ARR, driven as much by growth quality and retention as by revenue size.</li>
+    <li>The number that matters most to you isn't the valuation itself, it's the resulting dilution, including any option pool effect.</li>
+    <li>On a SAFE or convertible note, the relevant figure is usually the valuation cap, not a final valuation, since conversion happens at the next priced round.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_73_how_to_calculate_valuation';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.method-name,.method-fit,.method-text,.box-title,.callout-title,.key-points-title,.example-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>
