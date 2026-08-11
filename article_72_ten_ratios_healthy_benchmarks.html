@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 financial ratios that tell you if your startup is actually healthy · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 14px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+blockquote{border-left:3px solid var(--brand);margin:28px 0;padding:14px 20px;background:var(--soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0;font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);font-style:italic}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.ratio-card{border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:16px}
+.ratio-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.ratio-name{font-family:'DM Serif Display',serif;font-size:19px;color:var(--ink)}
+.ratio-tagline{font-size:12px;color:var(--brand);font-weight:600;text-align:right}
+.ratio-formula{background:var(--ink);color:#fff;border-radius:8px;padding:10px 14px;margin:10px 0;font-family:'DM Serif Display',serif;font-size:13.5px;line-height:1.5}
+.ratio-formula .fvar{color:#a5b4ff}
+.ratio-def{font-size:14.5px;color:#1a1a18;margin-bottom:8px;line-height:1.65}
+.ratio-why{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:10px}
+.ratio-why strong{color:var(--ink);font-weight:600}
+.ratio-bench{background:var(--soft);border-radius:8px;padding:10px 14px;font-size:12.5px;color:#333;line-height:1.6;border:1px solid var(--border)}
+.ratio-bench strong{color:#166534}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+  .ratio-top{flex-direction:column;align-items:flex-start}
+  .ratio-tagline{text-align:left}
+  blockquote{padding:12px 14px}
+  blockquote p{font-size:16px}
+}
+.audio-bar{display:flex;align-items:center;gap:8px;margin-bottom:28px}
+.audio-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--soft);border:1px solid var(--border);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--brand);cursor:pointer;transition:background .15s}
+.audio-btn:hover{background:#eceeff}
+.audio-stop{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:12px;padding:0}
+.audio-stop:hover{background:var(--soft)}
+@media print{.audio-bar{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+</div>
+
+<div class="audio-bar" id="audio-bar">
+  <button class="audio-btn" id="audio-toggle" onclick="toggleAudio()" type="button">
+    <svg id="audio-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="audio-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    <span id="audio-label">Listen to this article</span>
+  </button>
+  <button class="audio-stop" id="audio-stop" onclick="stopAudio()" type="button" style="display:none" aria-label="Stop">&#10005;</button>
+</div>
+
+<h1 class="article-title">10 financial ratios that tell you if your startup is actually healthy</h1>
+<div class="article-byline">
+  <span>By SheBlooms</span>
+  <span class="byline-dot"></span>
+  <span>10 min read</span>
+</div>
+
+<p class="article-lead">Growth tells you the business is getting bigger. It doesn't tell you whether it's getting healthier. These ten ratios are how you check the second thing, before an investor, or a bank, checks it for you.</p>
+
+<p>Most early-stage founders track one or two numbers obsessively, usually MRR and burn, and treat the rest of the balance sheet as something to worry about later. That's reasonable at the very earliest stage, when there isn't much of a balance sheet to speak of yet. But as soon as you have real revenue, real receivables, and real short-term obligations, these ten ratios become the language investors, lenders, and your own board will use to judge whether the business underneath the growth curve is actually sound.</p>
+
+<p>You don't need all ten to be strong on day one. What you need is to know where you stand on each of them, and to be able to explain honestly what you're doing about the ones that aren't yet where they should be. That, more than any single number, is what reads as financial maturity.</p>
+
+<h2>Liquidity: can you cover what you owe right now</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">1. Working Capital</div><div class="ratio-tagline">Am I financially balanced?</div></div>
+  <div class="ratio-formula">Working Capital = <span class="fvar">Current Assets</span> - <span class="fvar">Current Liabilities</span></div>
+  <div class="ratio-def">The cushion of short-term assets left over once you've covered your short-term liabilities.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> a positive number means you can comfortably meet what's due within the year. A negative one is an early warning sign of cash strain, even if the company looks profitable on paper.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> positive, and growing roughly in step with revenue. A working capital figure that's shrinking while revenue grows is worth investigating before it becomes a crisis.</div>
+</div>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">7. Quick Ratio</div><div class="ratio-tagline">Do I have liquidity problems?</div></div>
+  <div class="ratio-formula">Quick Ratio = <span class="fvar">Realizable + Available Assets</span> &divide; <span class="fvar">Current Liabilities</span></div>
+  <div class="ratio-def">Whether you can cover short-term debts using cash and near-cash assets, without needing to sell inventory to do it.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> it's a stricter, faster test than working capital alone, useful for catching a cash crunch before it becomes a crisis rather than after.</div>
+  <div class="ratio-bench"><strong>Healthy range:</strong> generally, at or above <strong>1.0</strong> is considered safe, meaning you could cover current liabilities without relying on inventory sales. Software and service businesses, which hold little inventory, often run comfortably above this.</div>
+</div>
+
+<h2>Cash generation: is the business actually making money, or just recording it</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">2. Cash Flow</div><div class="ratio-tagline">How am I doing on cash generation?</div></div>
+  <div class="ratio-formula">Cash Flow = <span class="fvar">Net Profit</span> + <span class="fvar">Depreciation & Amortization</span></div>
+  <div class="ratio-def">The real cash a business generates, adding back non-cash charges that reduce accounting profit but never leave the bank account.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> profit is an opinion, cash is a fact. This shows whether the business is actually generating money to reinvest or pay down debt, not just recording a profit on paper.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> positive, and ideally growing faster than your burn rate. A pre-profitability startup will often show negative cash flow; the number to watch is whether the gap is narrowing on a predictable trajectory.</div>
+</div>
+
+<h2>Profitability: are your investments and your capital paying off</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">3. Return on Assets (ROA)</div><div class="ratio-tagline">Are my investments profitable?</div></div>
+  <div class="ratio-formula">ROA = <span class="fvar">EBIT</span> &divide; <span class="fvar">Total Assets</span></div>
+  <div class="ratio-def">How much operating profit the company generates for every euro invested in assets, before financing costs and taxes.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> it isolates operating performance from how the business is financed, so you can judge whether the core activity itself is a good investment, independent of your capital structure.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> positive and trending up. Absolute "good" values vary enormously by industry and by capital-intensity, so track your own trend quarter over quarter rather than comparing directly against unrelated businesses.</div>
+</div>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">4. Return on Equity (ROE)</div><div class="ratio-tagline">Am I giving my partners enough return?</div></div>
+  <div class="ratio-formula">ROE = <span class="fvar">Net Profit</span> &divide; <span class="fvar">Equity</span></div>
+  <div class="ratio-def">The return generated on the capital that owners and shareholders have actually put into the business.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> investors compare this against what they could earn elsewhere. If ROE consistently trails a safer alternative, it becomes harder to justify keeping, or adding, capital in your company.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> most early-stage startups run a negative ROE by design, since they're spending investor capital to build before earning it back. What matters is a credible, evidenced path toward a positive figure that beats what capital could earn elsewhere.</div>
+</div>
+
+<h2>Collections and payments: how well you manage the timing of cash</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">5. DSO (Days Sales Outstanding)</div><div class="ratio-tagline">Am I managing collections well?</div></div>
+  <div class="ratio-formula">DSO = <span class="fvar">Average Accounts Receivable</span> &divide; <span class="fvar">Operating Revenue</span> &times; 365</div>
+  <div class="ratio-def">The average number of days it takes to collect payment from customers after a sale.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> the longer this is, the more of your own cash is tied up financing your customers instead of your own operations. Shortening it frees up working capital without needing new financing.</div>
+  <div class="ratio-bench"><strong>Healthy range:</strong> varies by business model, but for most B2B SaaS and service businesses, under <strong>45-60 days</strong> is a reasonable target. A rising DSO over consecutive quarters is usually a more useful signal than the absolute number itself.</div>
+</div>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">6. DPO (Days Payable Outstanding)</div><div class="ratio-tagline">Am I managing payments well?</div></div>
+  <div class="ratio-formula">DPO = <span class="fvar">Average Accounts Payable</span> &divide; <span class="fvar">Net Purchases</span> &times; 365</div>
+  <div class="ratio-def">The average number of days your company takes to pay its own suppliers.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> a healthy DPO lets you use supplier credit as a source of free financing. Push it too far, though, and you risk damaging supplier relationships and losing early-payment terms.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> roughly matched to, or modestly higher than, your DSO. If you're paying suppliers faster than you're collecting from customers, you're financing that gap out of your own cash reserves.</div>
+</div>
+
+<h2>Financial structure: how much of the business is borrowed</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">8. Debt Ratio (Leverage)</div><div class="ratio-tagline">Is my financial structure correct?</div></div>
+  <div class="ratio-formula">Debt Ratio = <span class="fvar">Liabilities</span> &divide; (<span class="fvar">Liabilities + Equity</span>)</div>
+  <div class="ratio-def">The proportion of the company financed by debt versus by owners' capital.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> too much debt increases financial risk and interest burden; too little can mean you're not using leverage that could otherwise help you grow. Investors and lenders both use this to gauge how risky your balance sheet is.</div>
+  <div class="ratio-bench"><strong>Healthy range:</strong> a debt ratio below roughly <strong>0.5-0.6</strong> is generally viewed as conservative for an early-stage company. Most venture-backed startups run low on this ratio simply because equity, not debt, funds the early years.</div>
+</div>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">9. Debt Repayment Capacity</div><div class="ratio-tagline">Can I negotiate with the banks?</div></div>
+  <div class="ratio-formula">Debt Repayment Capacity = (<span class="fvar">Profit + Depreciation & Amortization</span>) &divide; <span class="fvar">Liabilities</span></div>
+  <div class="ratio-def">How much of your total debt the business could repay using the cash it generates in a single year.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> banks use this to decide how much more they're willing to lend you, and on what terms. A strong ratio gives you real negotiating leverage the next time you need financing.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> higher is better; a ratio that suggests you could repay your debt load within a small number of years signals real capacity, not just current solvency.</div>
+</div>
+
+<h2>Efficiency: how hard your assets are working for you</h2>
+
+<div class="ratio-card">
+  <div class="ratio-top"><div class="ratio-name">10. Total Asset Turnover</div><div class="ratio-tagline">Are my investments efficient?</div></div>
+  <div class="ratio-formula">Asset Turnover = <span class="fvar">Sales</span> &divide; <span class="fvar">Total Assets</span></div>
+  <div class="ratio-def">How much revenue the company generates for every euro tied up in assets.</div>
+  <div class="ratio-why"><strong>Why it matters:</strong> it shows how efficiently the business uses what it owns to generate sales. Low turnover can point to idle or underused assets sitting on the balance sheet.</div>
+  <div class="ratio-bench"><strong>Healthy direction:</strong> higher is generally better, but the "right" number depends heavily on how asset-heavy your business model is. A services or software business with few physical assets should show a much higher turnover than a hardware or inventory-heavy one.</div>
+</div>
+
+<div class="example-box">
+  <div class="example-label">How to use these on a financials slide, not just in a spreadsheet</div>
+  <div class="example-text">You don't need to present all ten. Pick the two or three most relevant to your business model, for most SaaS startups that's usually cash flow, DSO, and debt ratio, and show them as a short trend line over the last few quarters. A ratio moving in the right direction over time is more convincing than a single snapshot, good or bad.</div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">A note on "healthy" ranges</div>
+  <p>Every benchmark above is a general reference point, not a rule. Healthy ranges shift by industry, by geography, and by business model, a hardware company and a SaaS company will never look alike on asset turnover, and that's expected. What investors are actually evaluating is whether you understand what's driving each ratio and have a plan for the ones that aren't yet where you'd like them to be.</p>
+</div>
+
+<div class="key-points">
+  <div class="key-points-title">Key takeaways</div>
+  <ul>
+    <li>These ten ratios cover four areas: liquidity, cash generation, profitability, and efficiency. Together they answer whether the business is healthy, not just growing.</li>
+    <li>You don't need every ratio to be strong today. You need to know where you stand and have a plan for the ones that aren't.</li>
+    <li>Working capital and the quick ratio test whether you can meet short-term obligations; both should stay positive.</li>
+    <li>DSO and DPO measure the timing of cash in and out; a rising DSO trend is usually more telling than the number itself.</li>
+    <li>Pick the two or three ratios most relevant to your business model for your slide, and show the trend, not just a single snapshot.</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+  const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+  const article='article_72_ten_ratios_healthy_benchmarks';
+  fetch(SB_URL+'/rest/v1/template_events',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'apikey':SB_KEY,
+      'Authorization':'Bearer '+SB_KEY,
+      'Prefer':'return=minimal'
+    },
+    body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+  }).catch(()=>{});
+})();
+</script>
+
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var isPaused = false;
+  function getArticleText(){
+    var root = document.querySelector('.page');
+    if(!root) return document.title;
+    var bar = document.getElementById('audio-bar');
+    var header = root.querySelector('.site-header');
+    var sel = 'h1,h2,h3,p,li,blockquote p,.ratio-name,.ratio-tagline,.ratio-def,.ratio-why,.ratio-bench,.callout-title,.key-points-title,.example-label';
+    var nodes = root.querySelectorAll(sel);
+    var parts = [];
+    for(var i=0;i<nodes.length;i++){
+      var el = nodes[i];
+      if(bar && (el===bar || bar.contains(el))) continue;
+      if(header && (el===header || header.contains(el))) continue;
+      var t = el.textContent.replace(/s+/g,' ').trim();
+      if(t) parts.push(t);
+    }
+    return parts.join('. ');
+  }
+  function resetAudioUI(){
+    isPaused = false;
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(p) p.style.display='';
+    if(pa) pa.style.display='none';
+    if(lbl) lbl.textContent='Listen to this article';
+    if(stopBtn) stopBtn.style.display='none';
+  }
+  window.toggleAudio = function(){
+    if(!synth){ alert('Text-to-speech is not supported in this browser.'); return; }
+    var p = document.getElementById('audio-icon-play');
+    var pa = document.getElementById('audio-icon-pause');
+    var lbl = document.getElementById('audio-label');
+    var stopBtn = document.getElementById('audio-stop');
+    if(synth.speaking && !isPaused){
+      synth.pause(); isPaused = true;
+      if(p) p.style.display=''; if(pa) pa.style.display='none';
+      if(lbl) lbl.textContent='Resume';
+      return;
+    }
+    if(isPaused){
+      synth.resume(); isPaused = false;
+      if(p) p.style.display='none'; if(pa) pa.style.display='';
+      if(lbl) lbl.textContent='Pause';
+      return;
+    }
+    var text = getArticleText();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.98;
+    utter.onend = resetAudioUI;
+    utter.onerror = resetAudioUI;
+    synth.speak(utter);
+    if(p) p.style.display='none'; if(pa) pa.style.display='';
+    if(lbl) lbl.textContent='Pause';
+    if(stopBtn) stopBtn.style.display='inline-flex';
+  };
+  window.stopAudio = function(){
+    if(synth) synth.cancel();
+    resetAudioUI();
+  };
+})();
+</script>
+
+</body>
+</html>
