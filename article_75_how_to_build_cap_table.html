@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to build and read your startup's cap table, with a full dilution example · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 10px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic;color:var(--brand)}
+a{color:var(--brand)}
+.section-note{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4d;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.step-box{border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin:20px 0;position:relative;padding-left:56px}
+.step-num{position:absolute;left:18px;top:20px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step-title{font-weight:600;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.step-desc{font-size:14px;color:#333;line-height:1.65}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;padding:8px 10px;border-bottom:2px solid var(--border)}
+td{padding:10px 10px;border-bottom:1px solid var(--border);color:#1a1a18}
+tr:last-child td{border-bottom:none;font-weight:600}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header"><span class="logo">SheBlooms</span></div>
+
+  <h1 class="article-title">How to build and read your startup's cap table, with a full dilution example</h1>
+  <div class="article-byline"><span>SheBlooms</span><span class="byline-dot"></span><span>Team &amp; governance</span></div>
+  <p class="article-lead">You don't need a lawyer to understand your own cap table. You need a lawyer to make it legally correct. Those are two different problems, and this walks through the first one.</p>
+
+  <p>A cap table isn't something you build once and file away. It's the running record of every ownership decision your company makes, and it needs to stay accurate from the day you incorporate through every hire, grant, and round after. Below is the order those decisions actually happen in, followed by a full worked example so you can see how dilution compounds across a company's life, not just in a single round.</p>
+
+  <h2>Building it: the sequence that matters</h2>
+
+  <div class="step-box">
+    <div class="step-num">1</div>
+    <div class="step-title">Incorporate and authorize shares</div>
+    <div class="step-desc">Set up the entity your investors expect (in most startup ecosystems, a standard C-corp or equivalent) and authorize a share count well above what you'll issue immediately — 10,000,000 authorized shares is a common starting point. Authorizing high now avoids an awkward charter amendment later just to issue more shares.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">2</div>
+    <div class="step-title">Issue founder shares — on a vesting schedule, even if you're 50/50</div>
+    <div class="step-desc">Issue shares to each founder immediately, but attach standard vesting (four years, one-year cliff) to all of them, including yours. This isn't about distrust — it's the single clearest signal to any future investor that the company, not any one person's ego, owns the equity if someone leaves early.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">3</div>
+    <div class="step-title">File your 83(b) election within 30 days</div>
+    <div class="step-desc">If you're in a jurisdiction where this applies, file it the same week you receive your shares. It lets you pay tax on the (near-zero) value of your shares today rather than on their much higher value as they vest. This deadline does not move and cannot be appealed after the fact.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">4</div>
+    <div class="step-title">Carve out the option pool before you need it</div>
+    <div class="step-desc">Reserve 10-15% of the fully diluted cap table for future hires before you're mid-negotiation on a round, because most investors will require this anyway and will expect the dilution to come from the founders' side, not theirs. Deciding the size yourself, based on your actual 18-24 month hiring plan, beats accepting whatever number a term sheet proposes.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">5</div>
+    <div class="step-title">Record every SAFE, note, and priced round the day it closes</div>
+    <div class="step-desc">Log the instrument type, amount, discount, and cap immediately — not the terms you remember months later. Model what each SAFE converts to <em>at the point it will actually convert</em>, not at today's rough guess of your valuation.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">6</div>
+    <div class="step-title">Reconcile before every raise and every year-end</div>
+    <div class="step-desc">Before you go into diligence, walk the entire cap table line by line against your actual signed documents: stock purchase agreements, board consents, SAFE agreements. This is where most "clean-up" surprises get caught before an investor's lawyer catches them for you.</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">Spreadsheet vs. software</div>
+    <p>A spreadsheet is genuinely fine at Pre-Seed and early Seed — the mechanics below work the same either way. Once you have more than a handful of stakeholders, multiple SAFEs at different caps, or your first priced round closing, moving to dedicated cap table software (Carta, Pulley, and similar tools are the common choices) removes the risk of manual formula errors compounding into real ownership disputes.</p>
+  </div>
+
+  <h2>Reading it: what the numbers actually mean</h2>
+  <p>Every cap table answers the same three questions for each stakeholder: how many shares do they hold, what percentage of the company does that represent today, and what percentage does it represent on a fully diluted basis. The gap between the second and third number is where option pools and unconverted SAFEs hide.</p>
+
+  <h2>Worked example: one company, three rounds</h2>
+  <p>Here's how ownership actually moves for a two-founder company from incorporation through Series A. Numbers are simplified for clarity.</p>
+
+  <div class="example-box">
+    <div class="example-label">Starting point</div>
+    <div class="example-text">Two founders, 60/40 split, 8,000,000 shares issued between them. A 10% option pool is carved out before the first raise, bringing total fully diluted shares to roughly 8,888,889 and the founders to 54.0% / 36.0%.</div>
+  </div>
+
+  <table>
+    <tr><th>Event</th><th>What happens</th><th>Founder A</th><th>Founder B</th><th>Pool + investors</th></tr>
+    <tr><td>Incorporation</td><td>60/40 founder split</td><td>60.0%</td><td>40.0%</td><td>0%</td></tr>
+    <tr><td>Option pool carved out</td><td>10% pool created pre-raise</td><td>54.0%</td><td>36.0%</td><td>10.0%</td></tr>
+    <tr><td>Pre-Seed SAFE converts</td><td>SAFE converts at Seed, ~12% to that investor</td><td>47.5%</td><td>31.7%</td><td>20.8%</td></tr>
+    <tr><td>Seed round (priced)</td><td>New investors take 20% of post-money</td><td>38.0%</td><td>25.3%</td><td>36.7%</td></tr>
+    <tr><td>Series A (priced)</td><td>New investors take 20%, pool refreshed +5%</td><td>28.9%</td><td>19.3%</td><td>51.8%</td></tr>
+  </table>
+
+  <p>Notice what happened to the founders: they started controlling 100% of the company and end Series A holding roughly 48% combined — still very much in control of outcomes, but no longer holding a majority on paper. That's not a mistake or a bad negotiation; it's the ordinary math of building something big enough to need three rounds of capital and a real team. The number to watch isn't the percentage in isolation — it's the value of that percentage as the company's valuation grows across the same rounds.</p>
+
+  <div class="key-points">
+    <div class="key-points-title">Three things this example makes visible</div>
+    <ul>
+      <li>The option pool dilutes founders <em>before</em> any investor money arrives — it's not "new investor" dilution, it's dilution founders take on themselves to be able to hire.</li>
+      <li>A SAFE converting doesn't show up on the cap table as a real percentage until it actually converts — a founder quoting their ownership before that point is quoting a number that's about to change.</li>
+      <li>Each round's dilution applies to the <em>post-money</em> cap table, which is why the same 20% headline dilution shrinks everyone's slice by a different absolute amount each time.</li>
+    </ul>
+  </div>
+
+  <p class="section-note">This walkthrough is educational and uses simplified numbers to illustrate mechanics. Your actual cap table, share classes, and tax treatment depend on your jurisdiction and specific agreements — work with a startup lawyer and accountant to build and maintain the real one.</p>
+</div>
+</body>
+</html>
