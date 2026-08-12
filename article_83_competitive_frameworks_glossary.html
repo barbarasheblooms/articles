@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Competitive analysis frameworks explained: which one to use, and when · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 10px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic;color:var(--brand)}
+a{color:var(--brand)}
+.section-note{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4d;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.gloss-group{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:28px}
+.gloss-term{padding:16px 20px;border-bottom:1px solid var(--border)}
+.gloss-term:last-child{border-bottom:none}
+.gloss-name{font-weight:600;font-size:15px;margin-bottom:5px;color:var(--ink);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.gloss-abbr{font-size:11px;font-weight:700;color:var(--brand);background:#eef0ff;padding:2px 7px;border-radius:10px;letter-spacing:.02em}
+.gloss-def{font-size:14.5px;color:#1a1a18;margin-bottom:6px;line-height:1.65}
+.gloss-why{font-size:13px;color:var(--muted);line-height:1.65}
+.gloss-why strong{color:var(--brand);font-weight:600}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;padding:8px 10px;border-bottom:2px solid var(--border)}
+td{padding:10px 10px;border-bottom:1px solid var(--border);color:#1a1a18;vertical-align:top}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header"><span class="logo">SheBlooms</span></div>
+
+  <h1 class="article-title">Competitive analysis frameworks explained: which one to use, and when</h1>
+  <div class="article-byline"><span>SheBlooms</span><span class="byline-dot"></span><span>Competitive landscape</span></div>
+  <p class="article-lead">There is no single "correct" way to analyze competitors — different frameworks surface different things. Here are the four founders reach for most, what each one actually shows, and when it's the wrong tool for the job.</p>
+
+  <div class="key-points">
+    <div class="key-points-title">Before the glossary</div>
+    <ul>
+      <li>No framework replaces talking to real customers about why they chose (or rejected) an alternative — every framework below organizes evidence, it doesn't generate it.</li>
+      <li>Pick one primary framework for your pitch deck slide, but it's normal to use two or three internally to think through different angles before you settle on how to present it.</li>
+    </ul>
+  </div>
+
+  <div class="gloss-group">
+    <div class="gloss-term">
+      <div class="gloss-name">2x2 Positioning Map <span class="gloss-abbr">Perceptual Map</span></div>
+      <div class="gloss-def">A chart with two axes that matter to your customer's decision (e.g. price vs. ease of use, or breadth vs. depth of features), with every competitor — including you — plotted as a point.</div>
+      <div class="gloss-why">Best for: <strong>pitch deck slides.</strong> It's the most widely used format investors expect, but only works if the two axes reflect what customers genuinely weigh when choosing — "innovative vs. not innovative" is meaningless; "price vs. implementation time" is not.</div>
+    </div>
+    <div class="gloss-term">
+      <div class="gloss-name">Feature Comparison Matrix</div>
+      <div class="gloss-def">A table listing competitors as columns and specific capabilities as rows, with checkmarks or short notes showing who has what.</div>
+      <div class="gloss-why">Best for: <strong>internal product planning</strong> in categories where features are genuinely decision-relevant (e.g. B2B SaaS with a defined buying checklist). Weakest as a pitch deck slide — a wall of checkmarks that a funded competitor could replicate next quarter, and it invites the question "so what happens when they add that feature too?"</div>
+    </div>
+    <div class="gloss-term">
+      <div class="gloss-name">Porter's Five Forces</div>
+      <div class="gloss-def">A structural framework analyzing five pressures on your market: rivalry among existing competitors, threat of new entrants, threat of substitute products, bargaining power of suppliers, and bargaining power of buyers.</div>
+      <div class="gloss-why">Best for: <strong>understanding industry-level dynamics</strong> before deciding where to compete at all — useful when evaluating a new market or explaining why a market is (or isn't) structurally attractive. Overkill for an early pitch deck slide; more useful in an internal strategy memo or an investor's diligence questions.</div>
+    </div>
+    <div class="gloss-term">
+      <div class="gloss-name">Blue Ocean Strategy Canvas</div>
+      <div class="gloss-def">A chart comparing how much emphasis your business and competitors place on a shared set of value factors, designed to reveal where you're competing on the same factors as everyone else ("red ocean") versus creating a factor nobody else offers ("blue ocean").</div>
+      <div class="gloss-why">Best for: <strong>businesses claiming a genuinely new category or use case</strong>, not incremental improvement on an existing one. Weak fit if you're a faster/cheaper/better version of an existing category — use the positioning map instead.</div>
+    </div>
+  </div>
+
+  <h2>Which one for a pitch deck</h2>
+  <table>
+    <tr><th>Your situation</th><th>Best fit</th></tr>
+    <tr><td>Clear existing category, want to show where you stand out</td><td>2x2 Positioning Map</td></tr>
+    <tr><td>B2B buyer will literally checklist features before buying</td><td>Feature Comparison Matrix (used carefully, paired with a differentiation callout)</td></tr>
+    <tr><td>Investor is questioning whether the market itself is attractive</td><td>Porter's Five Forces (as answer, not as slide)</td></tr>
+    <tr><td>Claiming a genuinely new category or behavior change</td><td>Blue Ocean Strategy Canvas</td></tr>
+  </table>
+
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">A B2B expense-management startup considers three frameworks. A feature matrix against 4 competitors shows near-parity — everyone has receipt scanning and approval flows. A Porter's Five Forces read shows low switching costs (a red flag for retention, not for the pitch deck). They settle on a 2x2 positioning map with axes "depth of automation" vs. "implementation time," which is the only chart that visually shows their real differentiation: same automation depth as the incumbent, but a same-day setup versus the incumbent's 6-week implementation.</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">Avoid the feature-checkmark grid as your main slide</div>
+    <p>A table of checkmarks where you have more green checks than everyone else looks convincing for about a week — until a funded competitor ships the missing feature. Frameworks that show a structural or behavioral difference (positioning map, Blue Ocean canvas) age better than ones that show a feature snapshot.</p>
+  </div>
+
+  <p class="section-note">Use the Competitive Positioning Map tool below to build a 2x2 map for your own market and test a few axis combinations before deciding which one tells the clearest story.</p>
+</div>
+</body>
+</html>
