@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Bullseye framework: how to systematically test channels instead of guessing · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 10px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic;color:var(--brand)}
+a{color:var(--brand)}
+.section-note{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4d;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.step-box{border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin:20px 0;position:relative;padding-left:56px}
+.step-num{position:absolute;left:18px;top:20px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step-title{font-weight:600;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.step-desc{font-size:14px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header"><span class="logo">SheBlooms</span></div>
+
+  <h1 class="article-title">The Bullseye framework: how to systematically test channels instead of guessing</h1>
+  <div class="article-byline"><span>SheBlooms</span><span class="byline-dot"></span><span>Go-to-market</span></div>
+  <p class="article-lead">Testing five channels a little each is the most common way founders waste a quarter. The Bullseye framework, from Gabriel Weinberg and Justin Mares' book Traction, exists to stop that.</p>
+
+  <p>The core idea: out of roughly nineteen possible marketing and distribution channels, only a handful will ever work well for your specific business — and you almost never know which ones in advance. The framework is a disciplined way to find out fast, cheaply, and without spreading your limited time so thin that nothing gets a real test.</p>
+
+  <h2>The five steps</h2>
+
+  <div class="step-box">
+    <div class="step-num">1</div>
+    <div class="step-title">Brainstorm</div>
+    <div class="step-desc">List every plausible channel, even ones that seem unlikely — paid search, SEO/content, social, email, PR, events, partnerships, sales, community, affiliate, and so on. The point of this step is coverage, not judgment; you'll cut the list in the next step.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">2</div>
+    <div class="step-title">Rank</div>
+    <div class="step-desc">For each channel, estimate roughly: cost to test, likely customer volume, and how well it fits your price point, sales cycle, and buyer type (see the channel-fit framework for that last part). Be honest about which ones you're ranking highly just because they sound exciting rather than because they actually fit.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">3</div>
+    <div class="step-title">Prioritize</div>
+    <div class="step-desc">Pick the top 3 candidates from your ranking — not one, not ten. Three is enough to hedge against being wrong about any single channel, and few enough that each gets a real, well-resourced test instead of a token effort.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">4</div>
+    <div class="step-title">Test</div>
+    <div class="step-desc">Run small, cheap, time-boxed tests on all 3 in parallel — enough spend and time to get a real read on CAC and volume, but not so much that a bad bet is expensive. A test should answer one question clearly: can this channel produce customers at a cost and volume that could matter to this business.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">5</div>
+    <div class="step-title">Focus</div>
+    <div class="step-desc">Take whichever channel (usually just one) showed the strongest signal, and go all-in: more budget, more time, more of your team's attention. Stop the others — don't keep half-running channels that didn't show promise just because you already invested in the test.</div>
+  </div>
+
+  <h2>Why this beats "just try everything a bit"</h2>
+  <p>Splitting a limited budget and even more limited founder time across five or six channels means none of them gets enough investment to produce a signal you can trust. A channel that might have worked brilliantly with real focus looks like a failure when it only got 15% of your attention. The Bullseye framework forces the discipline of a real test on a short list, rather than a shallow test on a long one.</p>
+
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">A Pre-Seed B2B tool brainstorms 12 plausible channels, ranks them against price point (mid, $150/mo) and sales cycle (2-3 weeks, one decision-maker), and narrows to 3: LinkedIn outbound, content/SEO targeting a specific search term their buyers use, and a partnership with an adjacent tool used by the same audience. They spend a focused two weeks on each: outbound produces 4 customers at a €180 CAC, content produces early traffic but zero customers yet (too early to judge), and the partnership produces 6 warm intros and 2 customers with a much lower effective CAC. They focus their next quarter on the partnership and scale it, while letting content keep compounding in the background at low cost, and pausing outbound.</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">A test isn't a failure just because it didn't win</div>
+    <p>The goal of the test step is information, not validation of your favorite channel. A channel that clearly doesn't work is just as valuable a result as one that does — it tells you where not to spend the next quarter, which is worth more than the cost of the test.</p>
+  </div>
+
+  <p class="section-note">This framework is a prioritization tool, not a guarantee — some businesses genuinely need more than 3 tests before finding a working channel, especially in narrow or emerging markets. Use it to stay disciplined, not to force a result on an artificial timeline.</p>
+</div>
+</body>
+</html>
