@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to calculate the traction metrics investors actually check — with formulas and worked examples · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 10px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic;color:var(--brand)}
+a{color:var(--brand)}
+.section-note{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4d;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;padding:8px 10px;border-bottom:2px solid var(--border)}
+td{padding:10px 10px;border-bottom:1px solid var(--border);color:#1a1a18;vertical-align:top}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header"><span class="logo">SheBlooms</span></div>
+
+  <h1 class="article-title">How to calculate the traction metrics investors actually check — with formulas and worked examples</h1>
+  <div class="article-byline"><span>SheBlooms</span><span class="byline-dot"></span><span>Traction</span></div>
+  <p class="article-lead">"Growing fast" means nothing without the calculation behind it. Here's exactly how to compute the six numbers that show up in almost every traction conversation, with a worked example for each.</p>
+
+  <h2>MRR and ARR</h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">MRR (Monthly Recurring Revenue) = sum of all active customers' monthly subscription value. ARR (Annual Recurring Revenue) = MRR × 12.</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">40 customers on a €50/month plan and 5 on a €200/month plan: MRR = (40 × €50) + (5 × €200) = €2,000 + €1,000 = <strong>€3,000</strong>. ARR = €3,000 × 12 = <strong>€36,000</strong>. One-time or usage-based revenue is not MRR — only count revenue that recurs predictably.</div>
+  </div>
+
+  <h2>Month-over-month growth rate</h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">MoM growth % = ((Current month MRR − Previous month MRR) ÷ Previous month MRR) × 100</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">MRR grew from €3,000 to €3,450 in one month: (€3,450 − €3,000) ÷ €3,000 × 100 = <strong>15% MoM growth</strong>. Report growth over 3+ consecutive months, not a single lucky month — investors specifically look for the trend, not one data point.</div>
+  </div>
+
+  <h2>GMV (Gross Merchandise Value)</h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">GMV = Total value of all transactions processed through your platform in a period (before your take-rate or fees are deducted).</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">A marketplace processes 300 transactions averaging €80 each in a month: GMV = 300 × €80 = <strong>€24,000</strong>. If you take a 15% commission, your actual revenue is €3,600 — always report both GMV and your take-rate together; GMV alone overstates your actual business.</div>
+  </div>
+
+  <h2>Retention and churn</h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">Monthly churn % = (Customers lost during the month ÷ Customers at start of month) × 100. Retention % = 100 − churn %.</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">You start the month with 200 customers and 8 cancel: churn = 8 ÷ 200 × 100 = <strong>4% monthly churn</strong>, or <strong>96% monthly retention</strong>. A 4% monthly churn compounds to roughly a 60% annual retention rate — always convert monthly figures to an annual view before comparing to annual benchmarks.</div>
+  </div>
+
+  <h2>Net Revenue Retention <span style="font-size:14px;color:var(--muted)">(NRR)</span></h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">NRR % = ((Starting MRR + Expansion MRR − Contraction MRR − Churned MRR) ÷ Starting MRR) × 100</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">Starting MRR €10,000, existing customers upgrade for +€800 (expansion), some downgrade for −€300 (contraction), and €500 churns out: NRR = (€10,000 + €800 − €300 − €500) ÷ €10,000 × 100 = <strong>100%</strong>. Above 100% means existing customers alone are growing your revenue even before counting new customers — a strong signal at Series A.</div>
+  </div>
+
+  <h2>Repeat usage / repeat purchase rate</h2>
+  <div class="example-box">
+    <div class="example-label">Formula</div>
+    <div class="example-text">Repeat rate % = (Customers with 2+ purchases or sessions in a period ÷ Total customers in that period) × 100</div>
+  </div>
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">120 customers purchased in a quarter, and 45 of them purchased more than once: 45 ÷ 120 × 100 = <strong>37.5% repeat rate</strong>. For non-subscription businesses (e-commerce, marketplaces, usage-based apps), this is often a more relevant health signal than churn, which assumes an ongoing subscription that doesn't exist.</div>
+  </div>
+
+  <h2>Benchmarks by stage</h2>
+  <table>
+    <tr><th>Metric</th><th>Pre-Seed</th><th>Seed</th><th>Series A</th></tr>
+    <tr><td>MoM growth</td><td>Any positive trend</td><td>10-15%+</td><td>15-20%+ (SaaS reference)</td></tr>
+    <tr><td>Monthly churn</td><td>Not usually expected yet</td><td>Under ~7-10%</td><td>Under 5% (SaaS reference)</td></tr>
+    <tr><td>Net Revenue Retention</td><td>Not usually expected yet</td><td>Around 100%</td><td>100%+ ideal</td></tr>
+  </table>
+
+  <div class="callout">
+    <div class="callout-title">Always show the formula, not just the result</div>
+    <p>Stating "96% retention" without showing the underlying customer counts invites the question "retention of what, over what period, measured how?" Show the inputs alongside the number — it demonstrates you calculated it correctly and builds trust in every other number on the slide.</p>
+  </div>
+
+  <p class="section-note">Benchmarks vary meaningfully by business model, price point, and industry — a usage-based marketplace and an enterprise SaaS tool should not be judged against the same churn benchmark. Use these as a general reference, not a hard bar.</p>
+</div>
+</body>
+</html>
