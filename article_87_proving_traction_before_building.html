@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to prove traction before you've built the product: smoke tests, concierge MVPs, and fake-door tests · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 10px;line-height:1.3}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic;color:var(--brand)}
+a{color:var(--brand)}
+.section-note{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4d;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+.step-box{border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin:20px 0;position:relative;padding-left:56px}
+.step-num{position:absolute;left:18px;top:20px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step-title{font-weight:600;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.step-desc{font-size:14px;color:#333;line-height:1.65}
+.example-box{background:var(--soft);border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border)}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.example-text{font-size:14px;line-height:1.65;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header"><span class="logo">SheBlooms</span></div>
+
+  <h1 class="article-title">How to prove traction before you've built the product: smoke tests, concierge MVPs, and fake-door tests</h1>
+  <div class="article-byline"><span>SheBlooms</span><span class="byline-dot"></span><span>Traction</span></div>
+  <p class="article-lead">You don't need a finished product to know whether people want it. These four tests let you gather real evidence of demand in days or weeks, before you spend months building something nobody buys.</p>
+
+  <div class="step-box">
+    <div class="step-num">1</div>
+    <div class="step-title">Fake-door test (also called a "smoke test")</div>
+    <div class="step-desc">Publish a landing page, ad, or button describing the product as if it exists, and measure how many people click through to "buy" or "sign up" before hitting a "coming soon, join the waitlist" message. Measures: click-through rate, email capture rate, and — if you show a real price — how many proceed past that point. Cheapest and fastest test on this list; weakest signal because no money or real commitment changes hands.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">2</div>
+    <div class="step-title">Concierge MVP</div>
+    <div class="step-desc">Deliver the outcome manually, using humans and spreadsheets instead of software, to a small number of real customers at your real (or close to real) target price. Measures: whether people pay for the outcome, how they react to using it, and where the manual process breaks down — which becomes your first product spec. Slower and more effort than a fake-door test, but produces far stronger evidence, including real payment and real usage feedback.</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">3</div>
+    <div class="step-title">Wizard of Oz test</div>
+    <div class="step-desc">Build a real front-end interface that customers interact with, but power it manually behind the scenes instead of with the automated system you'll eventually build. Measures: how customers actually behave with a product-like interface, without committing engineering time to the automation yet. Useful when the interface itself, not just the outcome, needs testing (e.g. a matching algorithm you're initially running by hand).</div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">4</div>
+    <div class="step-title">Paid pre-sale / pilot</div>
+    <div class="step-desc">Ask real prospective customers to pay — even a deposit, even a reduced price — for something that doesn't fully exist yet, with a clear delivery date. Measures: true willingness to pay, which is the single strongest signal any of these tests can produce. Requires enough credibility (a demo, a clear spec, a trusted intro) that a prospect is willing to commit money to something unbuilt.</div>
+  </div>
+
+  <h2>Choosing the right test for your stage</h2>
+  <p>Start cheap and fast, then escalate as each test gives you a "yes, keep going" signal. A fake-door test that gets no clicks tells you to rethink the concept before spending a single hour on a concierge test. A concierge MVP that converts to a handful of paid pilots tells you the manual process is worth automating.</p>
+
+  <div class="example-box">
+    <div class="example-label">Worked example</div>
+    <div class="example-text">A founder wants to build a service that matches freelance nurses with short-notice shifts at clinics. Before writing code, she runs a fake-door test (a simple landing page describing the service) that gets a 4% signup rate from clinic administrators she reached via LinkedIn — encouraging but not conclusive. She then runs a two-week concierge MVP: manually matching 8 real shifts using a spreadsheet and WhatsApp, charging clinics a placement fee. Five of eight matches succeed, three clinics ask to continue past the trial, and two pay the full fee without prompting. That's real traction — a working, tested outcome and real payment — before a single line of matching-algorithm code exists.</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">A test that shows no interest is a good outcome, not a failed one</div>
+    <p>The point of these tests is to find out cheaply whether an idea works, including finding out that it doesn't. A fake-door test with a 0.3% click rate after real traffic just saved you six months of building the wrong thing — that's a successful test, even though the underlying idea needs rethinking.</p>
+  </div>
+
+  <p class="section-note">These tests produce real signal but not a scaled business — investors will still expect a credible plan for how the manual or partial process becomes a real, scalable product. Use these tests to justify that plan with evidence, not to replace it.</p>
+</div>
+</body>
+</html>
