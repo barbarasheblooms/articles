@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Investors Ask: Pre-Seed &amp; Seed · SheBlooms</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#5B75FE;--ink:#0a0a08;--soft:#f5f5f2;--border:#e0e0db;--muted:#666}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.75}
+.page{max-width:680px;margin:0 auto;padding:48px 32px}
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-style:normal;font-size:24px;letter-spacing:-.01em;color:#5B75FE}
+.eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand);background:#eef0ff;padding:5px 10px;border-radius:999px}
+
+.stage-toggle{display:inline-flex;background:var(--soft);border-radius:999px;padding:4px;margin-bottom:28px;gap:2px}
+.stage-btn{appearance:none;border:none;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--muted);padding:9px 22px;border-radius:999px;transition:background .15s ease,color .15s ease}
+.stage-btn[aria-selected="true"]{background:#fff;color:var(--brand);box-shadow:0 1px 2px rgba(10,10,8,.06),0 4px 12px rgba(10,10,8,.05)}
+.stage-btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+
+.article-title{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.15;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;margin-bottom:32px}
+.byline-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.article-lead{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.55;color:#333;margin-bottom:36px;font-style:italic}
+h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin:40px 0 6px;line-height:1.3;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:24px 0 8px}
+p{margin-bottom:20px;color:#1a1a18}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px;color:#1a1a18}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+a{color:var(--brand)}
+.section-note{font-size:15px;color:var(--muted);margin-bottom:16px}
+.weight{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 11px;border-radius:999px;white-space:nowrap}
+.weight.high{background:#fbe9c6;color:#8a6114}
+.weight.medhigh{background:#eef0ff;color:#4f46e5}
+.weight.medium{background:var(--soft);color:var(--muted)}
+.qlist{list-style:none;margin:0 0 8px}
+.qlist li{padding:10px 0;border-top:1px solid var(--border);font-size:15px}
+.qlist li:first-child{border-top:none}
+.callout{background:#eef0ff;border-radius:10px;padding:20px 22px;margin:28px 0;border:1px solid #d0d6ff}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4f46e5;margin-bottom:8px}
+.callout p{margin:0;font-size:14px;color:#1e1b4b;line-height:1.65}
+.key-points{background:var(--soft);border-radius:10px;padding:20px 24px;margin:36px 0;border:1px solid var(--border)}
+.key-points-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.key-points li{font-size:14px;margin-bottom:7px}
+
+@media (max-width: 640px) {
+  .page{padding:32px 20px 48px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:24px}
+  .article-title{font-size:28px}
+  .article-lead{font-size:17px}
+  h2{font-size:20px}
+  .article-byline{flex-wrap:wrap;gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="site-header">
+  <div class="logo">SheBlooms</div>
+  <div class="eyebrow">Investment Readiness</div>
+</div>
+
+<div class="stage-toggle" role="tablist" aria-label="Funding stage">
+  <button class="stage-btn" id="tab-preseed" role="tab" aria-selected="true">Pre-Seed</button>
+  <button class="stage-btn" id="tab-seed" role="tab" aria-selected="false">Seed</button>
+</div>
+
+<div id="panel">
+  <h1 class="article-title" id="stage-title">What Investors Ask at Pre-Seed</h1>
+  <div class="article-byline">
+    <span>By SheBlooms</span>
+    <span class="byline-dot"></span>
+    <span id="stage-read-time">4 min read</span>
+  </div>
+  <p class="article-lead" id="stage-lead">At pre-seed, investors are betting almost entirely on people and thesis. There is no meaningful traction, often no product. What they want to understand is: can this team execute this idea?</p>
+  <p id="stage-intro">The conversation moves through five areas, roughly in order of how much weight they carry. Founding team and problem validation are close to non-negotiable. Product, market, and financials matter, but investors already know each is still incomplete at this stage, and they read them that way.</p>
+
+  <div id="sections">
+    <h2>Founding Team <span class="weight high">High weight</span></h2>
+    <p class="section-note">This is the single most important area at pre-seed. Investors are buying the founders, not the product.</p>
+    <ul class="qlist">
+      <li>Who are the founders, and what is their relevant experience?</li>
+      <li>Do they have prior experience in entrepreneurship or in this specific industry?</li>
+      <li>How are roles divided within the team?</li>
+      <li>Have they worked together before?</li>
+      <li>Do they have key advisors or mentors?</li>
+    </ul>
+
+    <h2>Problem &amp; Solution <span class="weight high">High weight</span></h2>
+    <p class="section-note">The problem needs to be real, specific, and urgent. At this stage, interviews, surveys, and waitlists count as validation.</p>
+    <ul class="qlist">
+      <li>What problem are you solving?</li>
+      <li>Why is this problem relevant and urgent right now?</li>
+      <li>How is the proposed solution better than current alternatives?</li>
+      <li>Have you validated the need with real customers? (Interviews, surveys, and waitlists count here, even without a product)</li>
+    </ul>
+
+    <h2>Product <span class="weight medium">Medium weight</span></h2>
+    <p class="section-note">Investors know the product is early. They want to see a credible plan, not a finished platform.</p>
+    <ul class="qlist">
+      <li>What stage is the product in? (Idea, prototype, MVP?)</li>
+      <li>What is the development roadmap?</li>
+      <li>What is the intended competitive advantage? (Technology, business model, market access)</li>
+    </ul>
+
+    <h2>Market &amp; Opportunity <span class="weight medium">Medium weight</span></h2>
+    <p class="section-note">They want to see that the market is big enough to matter and that the timing makes sense.</p>
+    <ul class="qlist">
+      <li>What is the TAM, SAM, and SOM?</li>
+      <li>Who are the main competitors?</li>
+      <li>Is there a market trend that makes this timing favorable?</li>
+    </ul>
+
+    <h2>Financials &amp; Use of Funds <span class="weight medium">Medium weight</span></h2>
+    <p class="section-note">At pre-seed, the financial conversation is about how you will use the money, not about complex projections.</p>
+    <ul class="qlist">
+      <li>How much capital are you seeking?</li>
+      <li>How do you plan to use the funds? (Hires, product, marketing)</li>
+      <li>What is the expected runway with this raise?</li>
+      <li>Have you raised capital before? From whom?</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title" id="callout-title">What investors typically do NOT ask at pre-seed</div>
+    <p id="callout-text">Detailed unit economics (CAC, LTV, churn) are not expected since there is not enough data yet. Sophisticated financial projections are largely fictional at this stage and investors know it. Exit strategy is premature, except in conversations with very specific angel investors.</p>
+  </div>
+
+  <div class="key-points">
+    <div class="key-points-title">Key takeaways</div>
+    <ul id="key-points-list">
+      <li>Founding team and problem validation carry the most weight; there's no way around either.</li>
+      <li>Interviews, surveys, and waitlists are legitimate validation, even with no product built yet.</li>
+      <li>Product, market, and use-of-funds questions test for a credible plan, not a finished answer.</li>
+      <li>Detailed unit economics, polished projections, and exit strategy are not expected yet.</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  const DATA = {
+    preseed: {
+      title: "What Investors Ask at Pre-Seed",
+      readTime: "4 min read",
+      lead: "At pre-seed, investors are betting almost entirely on people and thesis. There is no meaningful traction, often no product. What they want to understand is: can this team execute this idea?",
+      intro: "The conversation moves through five areas, roughly in order of how much weight they carry. Founding team and problem validation are close to non-negotiable. Product, market, and financials matter, but investors already know each is still incomplete at this stage, and they read them that way.",
+      sections: [
+        { name: "Founding Team", weight: "high", note: "This is the single most important area at pre-seed. Investors are buying the founders, not the product.",
+          items: ["Who are the founders, and what is their relevant experience?","Do they have prior experience in entrepreneurship or in this specific industry?","How are roles divided within the team?","Have they worked together before?","Do they have key advisors or mentors?"] },
+        { name: "Problem &amp; Solution", weight: "high", note: "The problem needs to be real, specific, and urgent. At this stage, interviews, surveys, and waitlists count as validation.",
+          items: ["What problem are you solving?","Why is this problem relevant and urgent right now?","How is the proposed solution better than current alternatives?","Have you validated the need with real customers? (Interviews, surveys, and waitlists count here, even without a product)"] },
+        { name: "Product", weight: "medium", note: "Investors know the product is early. They want to see a credible plan, not a finished platform.",
+          items: ["What stage is the product in? (Idea, prototype, MVP?)","What is the development roadmap?","What is the intended competitive advantage? (Technology, business model, market access)"] },
+        { name: "Market &amp; Opportunity", weight: "medium", note: "They want to see that the market is big enough to matter and that the timing makes sense.",
+          items: ["What is the TAM, SAM, and SOM?","Who are the main competitors?","Is there a market trend that makes this timing favorable?"] },
+        { name: "Financials &amp; Use of Funds", weight: "medium", note: "At pre-seed, the financial conversation is about how you will use the money, not about complex projections.",
+          items: ["How much capital are you seeking?","How do you plan to use the funds? (Hires, product, marketing)","What is the expected runway with this raise?","Have you raised capital before? From whom?"] }
+      ],
+      calloutTitle: "What investors typically do NOT ask at pre-seed",
+      calloutText: "Detailed unit economics (CAC, LTV, churn) are not expected since there is not enough data yet. Sophisticated financial projections are largely fictional at this stage and investors know it. Exit strategy is premature, except in conversations with very specific angel investors.",
+      keyPoints: [
+        "Founding team and problem validation carry the most weight; there's no way around either.",
+        "Interviews, surveys, and waitlists are legitimate validation, even with no product built yet.",
+        "Product, market, and use-of-funds questions test for a credible plan, not a finished answer.",
+        "Detailed unit economics, polished projections, and exit strategy are not expected yet."
+      ]
+    },
+    seed: {
+      title: "What Investors Ask at Seed",
+      readTime: "6 min read",
+      lead: "At seed, investors want to see that the pre-seed bet is paying off. There needs to be real evidence that the product works and that demand exists, even if the numbers are still modest.",
+      intro: "The same eight areas from pre-seed still come up, but the bar under each one moves. Traction and business model, which were barely discussed before, are now central. If you cannot show some form of product-market validation, most seed investors will pass regardless of how the rest of the story sounds.",
+      sections: [
+        { name: "Founding Team", weight: "high", note: "The same questions from pre-seed still apply, but now investors also evaluate how the team has evolved.",
+          items: ["Who are the founders, and what is their relevant experience?","How has the team grown since launch?","Does the team have the technical capacity to scale the product?","Have they made key hires?","Do they have advisors or mentors with relevant domain expertise?"] },
+        { name: "Problem &amp; Solution", weight: "medhigh", note: "The problem should now be validated in practice, not just in theory.",
+          items: ["Has the problem been confirmed in practice? Do paying customers validate the thesis?","Does the solution actually solve the problem better than alternatives?","Why is this problem relevant and urgent?"] },
+        { name: "Product or Service", weight: "high", note: "The product should be live. Investors want to see what it does and where it is going.",
+          items: ["Is the product in market? What version?","What are the key features?","What is the user experience like?","What is the competitive advantage? (Technology, business model, patents)","What is the product roadmap for the next 12 months?"] },
+        { name: "Traction &amp; Key Metrics", weight: "high", note: "This is where the conversation shifts. At seed, traction is what separates fundable companies from interesting ideas.",
+          items: ["How many active users or customers do you have?","What is your month-over-month growth (MoM)?","What is the retention rate and churn?","What is the level of engagement and recurrence?","What are your CAC and LTV? (At least initial estimates)"] },
+        { name: "Market &amp; Competition", weight: "medhigh", note: "Investors want to understand the playing field and how you plan to win.",
+          items: ["What is the TAM, SAM, and SOM?","Who are the main competitors and how do you differentiate?","How do you plan to scale in this market?","Is there traction evidence? (Revenue, user base, growth)"] },
+        { name: "Business Model", weight: "high", note: "How you make money matters now. The model needs to be clear and ideally showing early signs of working.",
+          items: ["How do you generate revenue? (Direct sales, subscription, transactional, advertising)","What is the average ticket size and gross margin?","Do you have positive unit economics or a clear path to profitability?","What is your pricing strategy?"] },
+        { name: "Financials &amp; Use of Funds", weight: "high", note: "The financial conversation gets more detailed at seed. Investors want to understand your burn and your plan.",
+          items: ["How much capital have you raised so far and from whom?","What is the current runway?","How much are you raising and how will you allocate it?","What is the financial projection for the next 12-24 months?","What percentage of sales goes to salaries?","What percentage of sales goes to marketing?"] },
+        { name: "Risks &amp; Challenges", weight: "medium", note: "Investors appreciate founders who see the risks clearly. Pretending everything is perfect is a red flag.",
+          items: ["What are the main risks the startup faces?","What barriers could hinder growth?","What are your biggest concerns at the moment?"] }
+      ],
+      calloutTitle: "Key difference from pre-seed",
+      calloutText: "At seed, traction and business model move from \"nice to have\" to central. Investors still care about the team, but they now expect evidence that the idea actually works in the real world. If you cannot show some form of product-market validation, most seed investors will pass.",
+      keyPoints: [
+        "Team questions carry over from pre-seed, plus evidence of growth: hires, technical capacity, advisors.",
+        "Traction and business model are now central, not supporting detail.",
+        "Product needs to be live, with a clear roadmap for the next 12 months.",
+        "Financials get more detailed: runway, allocation, and 12-24 month projections are expected.",
+        "Naming real risks clearly reads better than pretending none exist."
+      ]
+    }
+  };
+
+  const weightLabel = { high: "High weight", medhigh: "Medium-high weight", medium: "Medium weight" };
+
+  const els = {
+    title: document.getElementById('stage-title'),
+    readTime: document.getElementById('stage-read-time'),
+    lead: document.getElementById('stage-lead'),
+    intro: document.getElementById('stage-intro'),
+    sections: document.getElementById('sections'),
+    calloutTitle: document.getElementById('callout-title'),
+    calloutText: document.getElementById('callout-text'),
+    keyPoints: document.getElementById('key-points-list'),
+    tabPre: document.getElementById('tab-preseed'),
+    tabSeed: document.getElementById('tab-seed')
+  };
+
+  function render(stageKey){
+    const d = DATA[stageKey];
+    els.title.textContent = d.title;
+    els.readTime.textContent = d.readTime;
+    els.lead.textContent = d.lead;
+    els.intro.textContent = d.intro;
+    els.calloutTitle.textContent = d.calloutTitle;
+    els.calloutText.textContent = d.calloutText;
+
+    els.sections.innerHTML = d.sections.map(function(s){
+      const items = s.items.map(function(q){ return '<li>' + q + '</li>'; }).join('');
+      return (
+        '<h2>' + s.name + ' <span class="weight ' + s.weight + '">' + weightLabel[s.weight] + '</span></h2>' +
+        '<p class="section-note">' + s.note + '</p>' +
+        '<ul class="qlist">' + items + '</ul>'
+      );
+    }).join('');
+
+    els.keyPoints.innerHTML = d.keyPoints.map(function(k){ return '<li>' + k + '</li>'; }).join('');
+
+    els.tabPre.setAttribute('aria-selected', stageKey === 'preseed' ? 'true' : 'false');
+    els.tabSeed.setAttribute('aria-selected', stageKey === 'seed' ? 'true' : 'false');
+
+    try { localStorage.setItem('sb-ir-stage', stageKey); } catch(e) {}
+    logEvent(stageKey);
+  }
+
+  function logEvent(stageKey){
+    try{
+      const SB_URL='https://fyswympbcriibpewkxnh.supabase.co';
+      const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5c3d5bXBiY3JpaWJwZXdreG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMjIwMTcsImV4cCI6MjA5Mjc5ODAxN30.l5gy0L9JU_8g0vIjoFWmUqP7T7zyHOsE0wdmkC2kBo0';
+      const article='article_94_investor_questions_guide_'+stageKey;
+      fetch(SB_URL+'/rest/v1/template_events',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=minimal'},
+        body:JSON.stringify({email:'anonymous',template:article,event:'opened'})
+      }).catch(function(){});
+    }catch(e){}
+  }
+
+  els.tabPre.addEventListener('click', function(){ render('preseed'); });
+  els.tabSeed.addEventListener('click', function(){ render('seed'); });
+
+  let initial = 'preseed';
+  try {
+    const saved = localStorage.getItem('sb-ir-stage');
+    if (saved === 'seed' || saved === 'preseed') initial = saved;
+  } catch(e) {}
+
+  render(initial);
+})();
+</script>
+
+</body>
+</html>
